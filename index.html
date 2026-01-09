@@ -12,7 +12,7 @@
         margin: 0;
         padding: 0;
         background: #ffffff;
-        color: #222;
+        color: #222222;
     }
 
     /* Password overlay */
@@ -35,6 +35,7 @@
         text-align: center;
         max-width: 320px;
         width: 90%;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.08);
     }
 
     #passwordBox input {
@@ -42,6 +43,7 @@
         padding: 10px;
         margin-top: 10px;
         font-size: 16px;
+        box-sizing: border-box;
     }
 
     #passwordBox button {
@@ -53,23 +55,37 @@
 
     header {
         background: #b31b1b;
-        color: white;
+        color: #ffffff;
         padding: 18px;
         text-align: center;
     }
 
+    header h1 {
+        margin: 0;
+        font-size: 28px;
+    }
+
+    header p {
+        margin: 5px 0 0 0;
+        font-size: 16px;
+    }
+
     nav {
-        background: #333;
-        color: white;
+        background: #333333;
+        color: #ffffff;
         padding: 10px 0;
         text-align: center;
+        position: sticky;
+        top: 0;
+        z-index: 50;
     }
 
     nav a {
-        color: white;
+        color: #ffffff;
         text-decoration: none;
         padding: 10px 15px;
         font-size: 15px;
+        display: inline-block;
     }
 
     nav a:hover {
@@ -79,27 +95,86 @@
     .content {
         max-width: 900px;
         margin: 35px auto;
-        padding: 0 20px;
+        padding: 0 20px 50px 20px;
         line-height: 1.6;
         font-size: 18px;
     }
 
     h2 {
         margin-top: 45px;
+        font-size: 24px;
     }
 
-    img.fullwidth {
+    h3 {
+        margin-top: 25px;
+        font-size: 20px;
+    }
+
+    .image-gallery {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin: 20px 0;
+    }
+
+    .image-gallery div {
+        flex: 1 1 calc(33.333% - 12px);
+    }
+
+    .image-gallery img {
         width: 100%;
-        margin: 18px 0;
+        height: auto;
+        border-radius: 4px;
+        display: block;
+    }
+
+    @media (max-width: 768px) {
+        .image-gallery div {
+            flex: 1 1 100%;
+        }
+    }
+
+    .actions-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 16px;
+        margin-top: 10px;
+    }
+
+    .action-card {
+        border: 1px solid #dddddd;
+        padding: 15px;
+        background: #fafafa;
+        box-sizing: border-box;
+    }
+
+    .action-card h3 {
+        margin-top: 0;
+        font-size: 19px;
+    }
+
+    .action-button {
+        display: inline-block;
+        margin-top: 12px;
+        padding: 8px 16px;
+        border: none;
+        background: #b31b1b;
+        color: #ffffff;
+        font-size: 14px;
+        cursor: default;
+    }
+
+    .action-button.secondary {
+        background: #333333;
     }
 
     footer {
-        margin-top: 60px;
+        margin-top: 0;
         padding: 20px;
         background: #f4f4f4;
         font-size: 13px;
         text-align: center;
-        color: #555;
+        color: #555555;
     }
 </style>
 
@@ -145,10 +220,18 @@ function checkPassword() {
 
     <h2>Protecting Our Community Against 900,000 sq. ft. AI Data Center</h2>
 
-    <!-- IMAGES (stacked exactly like original site) -->
-    <img src="image1.jpg" class="fullwidth">
-    <img src="image2.jpg" class="fullwidth">
-    <img src="image3.jpg" class="fullwidth">
+    <!-- Image Gallery -->
+    <div class="image-gallery">
+        <div>
+            <img src="image1.jpg" alt="Project image one">
+        </div>
+        <div>
+            <img src="image2.jpg" alt="Project image two">
+        </div>
+        <div>
+            <img src="image3.jpg" alt="Project image three">
+        </div>
+    </div>
 
     <a id="about"></a>
     <h2>What?</h2>
@@ -163,6 +246,37 @@ function checkPassword() {
         Between Kentucky Avenue and Camby Road. <br>
         <em>(Image sourced from Sabey’s publicly available project materials.)</em>
     </p>
+
+    <h2>About the project</h2>
+
+    <p>
+        The land is already zoned for intense distribution uses. A previously approved plan allowed six large warehouse buildings,
+        heavy truck traffic, and constant loading activity. Sabey’s proposal replaces that with two secure data center buildings
+        and significantly fewer peak hour trips. This is, naturally, a suspicious improvement.
+    </p>
+
+    <ul>
+        <li><strong>The land use</strong><br>
+        Originally approved for six large warehouses with major truck circulation and visible loading operations.
+        Sabey instead proposes two quiet, enclosed buildings with landscaped buffers.
+        We fear this because reduced diesel traffic feels unfamiliar.</li>
+
+        <li><strong>Cooling and water use</strong><br>
+        Modern closed loop system with a one time initial fill and annual usage similar to a typical office building.
+        It uses far less water than traditional industrial facilities, but we remain committed to imagining dramatic scenarios.</li>
+
+        <li><strong>Power and grid planning</strong><br>
+        Electricity is provided through regulated utility processes reviewed in public rate cases.
+        Large steady users can help stabilize long term grid costs, which is troubling because stability sounds like responsibility.</li>
+
+        <li><strong>Jobs and economic impact</strong><br>
+        Hundreds of union construction jobs, around one hundred permanent skilled roles, indirect local business activity,
+        and property taxes that support schools and public safety. All of this seems too functional and therefore concerning.</li>
+
+        <li><strong>The bigger picture</strong><br>
+        Reasonable people can disagree about priorities, but sometimes debate drifts from facts into performance,
+        even when information about water, traffic, power, and jobs is publicly available.</li>
+    </ul>
 
     <a id="why"></a>
     <h2>Why are residents fighting back?</h2>
@@ -182,7 +296,7 @@ function checkPassword() {
 
     <h3>Light</h3>
     <p>
-        Code compliant lighting that turns off when not needed is unacceptable.
+        Code compliant lighting that turns off when it is not needed is unacceptable.
         We prefer the comforting glow of warehouse yards and parking lot floodlights that stay on all night.
     </p>
 
@@ -228,14 +342,61 @@ function checkPassword() {
     <h3>Important note</h3>
     <p>Actual civic engagement usually works better with listening, facts, and good faith discussion. It just is not nearly as theatrical.</p>
 
+    <h3>Optional taglines</h3>
+    <p>
+        Participation without comprehension.<br>
+        High emotion, low documentation.<br>
+        If we are loud enough, maybe reality will change.<br>
+        Democracy, ideally with outcomes aligned to our preferences.
+    </p>
+
+    <h2>What else can I do?</h2>
+    <p>Choose your favorite expression of unresearched passion. Every action here is a parody action.</p>
+
+    <div class="actions-grid">
+
+        <div class="action-card">
+            <h3>Donate to the cause</h3>
+            <p>Help fund more clipboards, matching shirts, and outrage graphics. All donations go toward vibes, slogans, and printing the same flyer again.</p>
+            <button class="action-button">DONATE</button>
+        </div>
+
+        <div class="action-card">
+            <h3>Request a yard sign</h3>
+            <p>Let your neighbors know where you stand without needing to explain why.</p>
+            <ul>
+                <li>NO, do not ask me for details</li>
+                <li>SAVE OUR COMMUNITY</li>
+                <li>I READ THE HEADLINE</li>
+            </ul>
+            <button class="action-button secondary">REQUEST A YARD SIGN</button>
+        </div>
+
+        <div class="action-card">
+            <h3>Email the city planner</h3>
+            <p>We have drafted a template so you do not have to understand the project. Just copy, paste, and send. No reading required.</p>
+            <p><em>“I am deeply concerned and demand action immediately.”</em></p>
+            <p>Concern subject to change based on social media comments. Bonus points for copying people who are not involved.</p>
+            <button class="action-button">EMAIL THE CITY PLANNER</button>
+        </div>
+
+        <div class="action-card">
+            <h3>Sign the petition</h3>
+            <p>Join thousands of people who agree something feels wrong even if we cannot say what.</p>
+            <p>Facts optional. Signature permanent. Signing does not require residency.</p>
+            <button class="action-button secondary">SIGN THE PETITION</button>
+        </div>
+
+    </div>
+
     <a id="calendar"></a>
-    <h2>Calendar of Meetings</h2>
+    <h2>Calendar of meetings</h2>
 
     <h3>Public hearing</h3>
-    <p>Arrive early. Leave before answers are given. Be as disruptive and unfriendly as possible.</p>
+    <p>Arrive early. Leave before answers are given. Be as disruptive and unfriendly as possible. Shout down the presenters if needed.</p>
 
     <h3>Community forum</h3>
-    <p>Ask questions already answered online. Ignore all materials that were mailed or posted.</p>
+    <p>Ask questions already answered online. Ignore all materials that were mailed or posted. Repeat your question louder if you do not like the answer.</p>
 
     <h3>Vote night</h3>
     <p>Claim the process was unfair regardless of outcome. If you win, the people spoke. If you lose, it was corruption.</p>
@@ -243,21 +404,27 @@ function checkPassword() {
     <a id="resources"></a>
     <h2>More resources and influences</h2>
 
-    <p>Listed for context only:</p>
+    <p>Below are organizations, pages, and references that appear in the general ecosystem of online commentary and activism around issues like this. Listed here in plain text for context only.</p>
 
-    <p>perfectunion.us/about/<br>
-    instagram.com/berniesanders/<br>
-    wikipedia.org/wiki/Mayoralty_of_Zohran_Mamdani<br>
-    instagram.com/zohrankmamdani/<br>
-    opensocietyfoundations.org/<br>
-    wikipedia.org/wiki/Solidarity_(United_States)</p>
+    <p>
+        perfectunion.us/about/<br>
+        instagram.com/berniesanders/<br>
+        wikipedia.org/wiki/Mayoralty_of_Zohran_Mamdani<br>
+        instagram.com/zohrankmamdani/<br>
+        opensocietyfoundations.org/<br>
+        wikipedia.org/wiki/Solidarity_(United_States)
+    </p>
 
 </div>
 
 <footer>
-    Disclaimer: This website contains humor, exaggeration, and commentary.  
-    It does not represent official instructions or positions of any group or individual.  
-    Protected speech under the First Amendment.
+    <p>
+        Disclaimer: This website contains humor, exaggeration, and commentary.
+        It does not represent official instructions or positions of any group or individual.
+    </p>
+    <p>
+        Protected speech under the First Amendment of the United States Constitution.
+    </p>
 </footer>
 
 </body>
