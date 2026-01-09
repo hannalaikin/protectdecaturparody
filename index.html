@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>What Can I Do?</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+
+  <!-- Top bar -->
+  <header class="border-b border-slate-200 bg-white sticky top-0 z-30">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <div class="h-8 w-8 rounded-full bg-red-600 flex items-center justify-center text-white text-xs font-semibold">
+          !
+        </div>
+        <div class="leading-tight">
+          <div class="font-bold text-sm sm:text-base">What Can I Do</div>
+          <div class="text-xs text-slate-500">Participation without comprehension</div>
+        </div>
+      </div>
+
+      <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+        <a href="#what" class="hover:text-red-700">What Can I Do</a>
+        <a href="#why" class="hover:text-red-700">Why Residents Fight Back</a>
+        <a href="#actions" class="hover:text-red-700">Do Something</a>
+        <a href="#meetings" class="hover:text-red-700">Meetings</a>
+        <a href="#links" class="hover:text-red-700">Who Inspires Us</a>
+      </nav>
+
+      <button id="mobileToggle" class="md:hidden inline-flex items-center justify-center rounded-md border border-slate-300 px-3 py-1 text-xs">
+        Menu
+      </button>
+    </div>
+
+    <!-- Mobile nav -->
+    <nav id="mobileNav" class="md:hidden hidden border-t border-slate-200 bg-white">
+      <div class="max-w-6xl mx-auto px-4 py-3 flex flex-col gap-3 text-sm font-medium">
+        <a href="#what" class="hover:text-red-700">What What Can I Do</a>
+        <a href="#why" class="hover:text-red-700">Why Residents Fight Back</a>
+        <a href="#actions" class="hover:text-red-700">Do Something</a>
+        <a href="#meetings" class="hover:text-red-700">Meetings</a>
+        <a href="#links" class="hover:text-red-700">Who Inspires Us</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="pb-16">
+    <!-- Hero / What Can I Do -->
+    <section id="what" class="pt-10 pb-12">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="grid lg:grid-cols-3 gap-10 items-start">
+          <div class="lg:col-span-2 space-y-6">
+            <div class="inline-flex items-center rounded-full bg-red-50 px-3 py-1 text-xs font-semibold text-red-700 mb-3">
+              HOW TO OPPOSE PROGRESS WITHOUT DOING HOMEWORK
+            </div>
+            <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight">
+              WHAT CAN I DO?
+            </h1>
+            <p class="text-slate-600 text-sm sm:text-base max-w-2xl">
+              A field guide for the performative citizen who wants to be involved,
+              sound very concerned, and avoid reading anything longer than a headline.
+            </p>
+
+            <ol class="space-y-4 text-sm sm:text-base">
+              <li>
+                <p class="font-semibold">
+                  1. Attend every public meeting, prepared to ignore facts.
+                </p>
+                <p class="text-slate-700">
+                  Bring pre printed talking points. Do not read staff reports. Do not listen. Interrupt politely at first, then loudly.
+                </p>
+              </li>
+              <li>
+                <p class="font-semibold">
+                  2. Demand community input, then reject all outcomes.
+                </p>
+                <p class="text-slate-700">
+                  Participate enthusiastically unless the decision does not go your way. In that case, claim the process was rigged.
+                </p>
+              </li>
+              <li>
+                <p class="font-semibold">
+                  3. Chant slogans instead of asking questions.
+                </p>
+                <p class="text-slate-700">
+                  Complex topics like zoning, utilities, or environmental controls are best addressed with yelling.
+                </p>
+              </li>
+              <li>
+                <p class="font-semibold">
+                  4. Coordinate applause, boos, and synchronized outrage.
+                </p>
+                <p class="text-slate-700">
+                  Bonus points if you clap mid sentence while someone else is speaking.
+                </p>
+              </li>
+              <li>
+                <p class="font-semibold">
+                  5. Hold hands dramatically.
+                </p>
+                <p class="text-slate-700">
+                  It does not change the vote, but it photographs well.
+                </p>
+              </li>
+              <li>
+                <p class="font-semibold">
+                  6. Recruit friends from outside the community.
+                </p>
+                <p class="text-slate-700">
+                  Local issue. No problem. Bring reinforcements who have never been here but feel very strongly anyway.
+                </p>
+              </li>
+              <li>
+                <p class="font-semibold">
+                  7. Label disagreement as hate.
+                </p>
+                <p class="text-slate-700">
+                  If someone supports the project, do not debate them. Assign a motive.
+                </p>
+              </li>
+              <li>
+                <p class="font-semibold">
+                  8. Repeat claims even after they have been corrected.
+                </p>
+                <p class="text-slate-700">
+                  Consistency matters more than accuracy.
+                </p>
+              </li>
+              <li>
+                <p class="font-semibold">
+                  9. Accuse experts of lying, then demand expert studies.
+                </p>
+                <p class="text-slate-700">
+                  Disregard the studies once they arrive.
+                </p>
+              </li>
+              <li>
+                <p class="font-semibold">
+                  10. If all else fails, shout follow the money.
+                </p>
+                <p class="text-slate-700">
+                  No need to specify whose or how. Just gesture vaguely.
+                </p>
+              </li>
+            </ol>
+          </div>
+
+          <!-- Side card -->
+          <aside class="lg:col-span-1">
+            <div class="bg-white border border-slate-200 rounded-xl p-5 shadow-sm space-y-4">
+              <h2 class="text-base font-semibold text-slate-900">
+                Important note
+              </h2>
+              <p class="text-sm text-slate-700">
+                Actual civic engagement usually works better with listening, facts, and good faith discussion. It just is not nearly as theatrical.
+              </p>
+              <div class="pt-2 border-t border-slate-100">
+                <p class="text-xs uppercase tracking-wide text-slate-500 mb-2">
+                  Optional taglines
+                </p>
+                <ul class="space-y-1 text-xs text-slate-700">
+                  <li>Participation without comprehension.</li>
+                  <li>All emotion. No spreadsheets.</li>
+                  <li>If we are loud enough, maybe reality will change.</li>
+                  <li>Democracy, but only if we win.</li>
+                </ul>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why are residents fighting back -->
+    <section id="why" class="py-12 bg-white border-y border-slate-200">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="max-w-3xl space-y-6">
+          <h2 class="text-2xl font-extrabold">
+            Why are residents fighting back?
+          </h2>
+          <p class="text-slate-700">
+            Because progress is inconvenient.
+          </p>
+
+          <div class="space-y-4 text-sm sm:text-base text-slate-800">
+            <div>
+              <h3 class="font-semibold mb-1">Higher electricity and water bills, maybe someday</h3>
+              <p>
+                We prefer an aging grid held together with duct tape. Modern infrastructure threatens the comfort of rolling blackouts, surprise outages, and infrastructure failures we have grown used to.
+              </p>
+            </div>
+
+            <div>
+              <h3 class="font-semibold mb-1">
+                Property values might go up, and that is a problem
+              </h3>
+              <p>
+                Rising property values could increase equity, attract reinvestment, and improve public services.
+                Naturally, we oppose all of that. Decline is predictable. Growth is scary.
+              </p>
+            </div>
+
+            <div>
+              <h3 class="font-semibold mb-1">Health risks, theoretical, speculative, selectively framed</h3>
+              <p>
+                Although backup generators run rarely and under strict regulations, we prefer to imagine them operating all day in a permanent cloud of doom.
+                Actual nearby highways, warehouses, delivery trucks, and existing industrial uses are familiar and therefore harmless.
+              </p>
+            </div>
+
+            <div>
+              <h3 class="font-semibold mb-1">Noise concerns</h3>
+              <p>
+                Quiet enclosed buildings with limited traffic are unacceptable.
+                We strongly favor constant diesel truck traffic, backup beeping, and overnight loading docks. Those noises feel more authentic.
+              </p>
+            </div>
+
+            <div>
+              <h3 class="font-semibold mb-1">Light pollution</h3>
+              <p>
+                Security lighting that meets code and shuts down when not needed is deeply offensive.
+                We prefer the warm glow of underfunded streetlights, broken fixtures, and dark corridors that discourage walking and safety.
+              </p>
+            </div>
+          </div>
+
+          <div class="pt-4 border-t border-slate-200 space-y-4 text-sm sm:text-base text-slate-800">
+            <div>
+              <h3 class="font-semibold mb-1">
+                Our real concern, just being honest
+              </h3>
+              <ul class="list-disc list-inside space-y-1">
+                <li>We oppose high paying jobs.</li>
+                <li>We oppose lower traffic than warehouses.</li>
+                <li>We oppose new tax revenue for schools, police, and fire.</li>
+                <li>We oppose planning for the AI driven economy.</li>
+                <li>We oppose anything new, especially if it works.</li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="font-semibold mb-1">In summary</h3>
+              <p>
+                We are not anti data center.
+                We are pro decline, pro status quo, and pro complaint.
+                And we will fight progress quietly, loudly, and on the internet.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sabey project images -->
+    <section class="py-12 bg-slate-50">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="grid md:grid-cols-2 gap-8 items-start">
+          <div>
+            <h2 class="text-xl font-extrabold mb-3">
+              Sabey project snapshot
+            </h2>
+            <p class="text-sm sm:text-base text-slate-700 mb-4">
+              Below are illustrative placeholders for the Sabey Decatur Data Center site map and rendering.
+              Replace the image file paths with actual images from the Sabey website.
+            </p>
+            <ul class="text-sm text-slate-700 space-y-1">
+              <li>• Site map overview</li>
+              <li>• Project rendering of the campus</li>
+            </ul>
+          </div>
+          <div class="space-y-4">
+            <div class="bg-white border border-slate-200 rounded-xl p-3 shadow-sm">
+              <div class="aspect-video rounded-lg bg-slate-100 flex items-center justify-center text-xs text-slate-500">
+                <span>Replace src with Sabey site map image<br>Example file: sabey-site-map.jpg</span>
+              </div>
+              <img src="sabey-site-map.jpg" alt="Sabey Decatur Data Center site map placeholder" class="hidden">
+            </div>
+            <div class="bg-white border border-slate-200 rounded-xl p-3 shadow-sm">
+              <div class="aspect-video rounded-lg bg-slate-100 flex items-center justify-center text-xs text-slate-500">
+                <span>Replace src with Sabey rendering image<br>Example file: sabey-rendering.jpg</span>
+              </div>
+              <img src="sabey-rendering.jpg" alt="Sabey Decatur Data Center rendering placeholder" class="hidden">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Actions -->
+    <section id="actions" class="py-12 bg-white border-y border-slate-200">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-8">
+          <div>
+            <h2 class="text-2xl font-extrabold">
+              What else can I do
+            </h2>
+            <p class="text-sm sm:text-base text-slate-700 max-w-xl">
+              Choose your favorite expression of unresearched passion.
+              Every action is a parody action.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 text-sm">
+
+          <!-- Donate -->
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 flex flex-col justify-between">
+            <div class="space-y-2">
+              <h3 class="font-semibold text-base">Donate to the cause</h3>
+              <p class="text-slate-700">
+                Help fund more clipboards, matching T shirts, and outrage graphics.
+                All donations go toward vibes, slogans, and printing the same flyer again.
+              </p>
+            </div>
+            <div class="mt-4">
+              <a href="https://www.jotform.com/253627219565868" target="_blank"
+                class="block text-center rounded-lg bg-red-600 text-white text-xs font-semibold py-2.5">
+                DONATE
+              </a>
+            </div>
+          </div>
+
+          <!-- Yard sign -->
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 flex flex-col justify-between">
+            <div class="space-y-2">
+              <h3 class="font-semibold text-base">Request a yard sign</h3>
+              <p class="text-slate-700">
+                Let your neighbors know where you stand without needing to explain why.
+              </p>
+              <ul class="text-slate-700 list-disc list-inside space-y-1">
+                <li>NO, do not ask me for details</li>
+                <li>SAVE OUR COMMUNITY</li>
+                <li>I READ THE HEADLINE</li>
+              </ul>
+            </div>
+            <div class="mt-4">
+              <a href="https://www.jotform.com/253627219565868" target="_blank"
+                class="block text-center rounded-lg bg-slate-900 text-white text-xs font-semibold py-2.5">
+                REQUEST A YARD SIGN
+              </a>
+            </div>
+          </div>
+
+          <!-- Email the city planner -->
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 flex flex-col justify-between">
+            <div class="space-y-2">
+              <h3 class="font-semibold text-base">Email the city planner</h3>
+              <p class="text-slate-700">
+                We have drafted a template so you do not have to understand the project.
+                Just copy, paste, and send. No reading required.
+              </p>
+              <p class="text-slate-700 italic">
+                I am deeply concerned and demand action immediately.
+              </p>
+              <p class="text-slate-700 italic">
+                Bonus points for copying people who are not involved.
+              </p>
+            </div>
+            <div class="mt-4">
+              <a href="https://www.jotform.com/253627219565868" target="_blank"
+                class="block text-center rounded-lg bg-red-600 text-white text-xs font-semibold py-2.5">
+                EMAIL THE CITY PLANNER
+              </a>
+            </div>
+          </div>
+
+          <!-- Sign the petition -->
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 flex flex-col justify-between">
+            <div class="space-y-2">
+              <h3 class="font-semibold text-base">Sign the petition</h3>
+              <p class="text-slate-700">
+                Join thousands of people who agree something feels wrong even if we cannot say what.
+              </p>
+              <p class="text-slate-700">
+                Facts optional. Signature permanent.
+              </p>
+              <p class="text-slate-700">
+                Signing does not require residency.
+              </p>
+            </div>
+            <div class="mt-4">
+              <a href="https://www.jotform.com/253627219565868" target="_blank"
+                class="block text-center rounded-lg bg-slate-900 text-white text-xs font-semibold py-2.5">
+                SIGN THE PETITION
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Calendar -->
+    <section id="meetings" class="py-12 bg-slate-50">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-8">
+          <div>
+            <h2 class="text-2xl font-extrabold">
+              Upcoming meetings and opportunities for outrage
+            </h2>
+            <p class="text-sm sm:text-base text-slate-700 max-w-xl">
+              Attendance encouraged. Listening discouraged.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6 text-sm">
+
+          <div class="bg-white border border-slate-200 rounded-xl p-5 space-y-3">
+            <div class="text-xs font-semibold text-red-700 uppercase tracking-wide">
+              Public hearing
+            </div>
+            <p class="text-slate-700">
+              Arrive early. Leave before answers are given. Be as disruptive and loud and unfriendly as possible.
+            </p>
+            <p class="text-slate-700">
+              Shout down the presenters. Try to get removed for television.
+            </p>
+          </div>
+
+          <div class="bg-white border border-slate-200 rounded-xl p-5 space-y-3">
+            <div class="text-xs font-semibold text-red-700 uppercase tracking-wide">
+              Community forum
+            </div>
+            <p class="text-slate-700">
+              Ask questions already answered online. Ignore any materials that were mailed, posted, or explained three times.
+            </p>
+            <p class="text-slate-700">
+              Repeat your question louder if you do not like the answer.
+            </p>
+          </div>
+
+          <div class="bg-white border border-slate-200 rounded-xl p-5 space-y-3">
+            <div class="text-xs font-semibold text-red-700 uppercase tracking-wide">
+              Vote night
+            </div>
+            <p class="text-slate-700">
+              Claim the process was unfair regardless of outcome.
+            </p>
+            <p class="text-slate-700">
+              If you win, say it was because the people spoke. If you lose, say it was corruption.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Links section -->
+    <section id="links" class="py-12 bg-white border-y border-slate-200">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <h2 class="text-2xl font-extrabold mb-4">
+          Influences and inspirations
+        </h2>
+        <p class="text-sm sm:text-base text-slate-700 mb-4 max-w-2xl">
+          Below are organizations, pages, and references that appear in the general ecosystem of online outrage and activism.
+          Listed here in plain text for context only.
+        </p>
+        <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 text-xs sm:text-sm text-slate-800 space-y-2">
+          <p>perfectunion.us/about/</p>
+          <p>instagram.com/berniesanders/</p>
+          <p>wikipedia.org/wiki/Mayoralty_of_Zohran_Mamdani</p>
+          <p>instagram.com/zohrankmamdani/</p>
+          <p>opensocietyfoundations.org/</p>
+          <p>wikipedia.org/wiki/Solidarity_(United_States)</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-200 bg-slate-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-6">
+      <div class="text-[11px] text-slate-500 space-y-2">
+        <p class="max-w-3xl">
+          Disclaimer:
+          This website is a work of satire and parody intended for humor and commentary.
+          It does not represent factual claims, real instructions, or actual positions of any individual or organization.
+        </p>
+        <p>
+          Protected speech under the First Amendment of the United States Constitution.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById("mobileToggle");
+    const mobileNav = document.getElementById("mobileNav");
+
+    if (toggle && mobileNav) {
+      toggle.addEventListener("click", () => {
+        mobileNav.classList.toggle("hidden");
+      });
+    }
+  </script>
+
+</body>
+</html>
