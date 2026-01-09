@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>No Data Decatur</title>
+  <title>Protect Decatur Township | Join the fight against the AI Data Center</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Neutral preview metadata -->
   <meta name="description" content="Information and commentary about a proposed data center project in Decatur Township.">
-  <meta property="og:title" content="No Data Decatur">
+  <meta property="og:title" content="Protect Decatur Township">
   <meta property="og:description" content="Information and commentary about a proposed data center project in Decatur Township.">
   <meta property="og:type" content="website">
 
@@ -15,6 +15,9 @@
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
     body {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
@@ -60,23 +63,51 @@
     </div>
   </div>
 
-  <!-- MAIN CONTENT WRAPPED SO IT CAN BE HIDDEN UNTIL PASSWORD IS CORRECT -->
+  <!-- MAIN CONTENT -->
   <div id="site-content" class="hidden">
 
-    <!-- HEADER / HERO -->
-    <header class="border-b border-slate-200 bg-white">
-      <div class="content-width mx-auto px-4 py-6">
-        <h1 class="text-3xl font-bold mb-2">
-          Protecting Our Community Against nine hundred thousand square feet of AI data center
-        </h1>
-        <p class="text-sm text-slate-700">
-          A straight faced look at how people talk about power lines buildings water pipes and the future when change arrives with a site plan.
-        </p>
+    <!-- SITE HEADER WITH NAV -->
+    <header id="home" class="bg-white border-b border-slate-300">
+      <div class="max-w-6xl mx-auto px-4 py-6 flex items-center justify-between">
+        <!-- Site title -->
+        <div class="text-3xl font-light tracking-tight">
+          Protect Decatur Township
+        </div>
+
+        <!-- Nav -->
+        <nav class="flex items-center space-x-8 text-lg">
+          <a href="#home" class="text-slate-900 hover:text-slate-600">Home</a>
+
+          <div class="relative group">
+            <button class="flex items-center space-x-1 text-slate-900 hover:text-slate-600">
+              <span>About</span>
+              <span style="font-size:14px;">▾</span>
+            </button>
+            <div class="absolute hidden group-hover:block bg-white border border-slate-200 shadow-sm rounded-sm mt-2 py-2 w-44 z-20">
+              <a href="#about" class="block px-4 py-1 text-sm hover:bg-slate-100">About the Project</a>
+              <a href="#resources" class="block px-4 py-1 text-sm hover:bg-slate-100">More Resources</a>
+            </div>
+          </div>
+
+          <a href="#calendar" class="text-slate-900 hover:text-slate-600">Calendar</a>
+          <a href="#contact" class="text-slate-900 hover:text-slate-600">Contact</a>
+        </nav>
       </div>
+      <div class="w-full border-t border-slate-300"></div>
     </header>
 
+    <!-- HERO -->
+    <section class="content-width mx-auto px-4 pt-8 pb-4">
+      <h1 class="text-3xl font-bold mb-3">
+        Protecting Our Community Against 900,000 sq. ft. AI Data Center
+      </h1>
+      <p class="text-sm text-slate-700">
+        A straight faced look at how big numbers and future scenarios are used when a new building appears on the map.
+      </p>
+    </section>
+
     <!-- GALLERY -->
-    <section class="content-width mx-auto px-4 py-8">
+    <section class="content-width mx-auto px-4 pb-8">
       <div class="grid md:grid-cols-3 gap-4">
         <div class="border border-slate-200 rounded-md overflow-hidden">
           <img src="image1.jpg" alt="Project related image one" class="w-full h-40 object-cover">
@@ -90,22 +121,23 @@
       </div>
     </section>
 
-    <!-- WHAT / WHERE -->
+    <!-- MAIN COLUMN -->
     <main class="content-width mx-auto px-4 pb-16 space-y-10">
 
+      <!-- WHAT / WHERE -->
       <section class="space-y-3">
         <h2 class="text-2xl font-bold">What</h2>
         <p class="text-slate-800">
-          Sabey Corporation is a data center company planning a campus of about nine hundred thousand square feet with power service of two hundred fifty megawatts. The numbers are large and repeat well in conversation which makes them very useful in public debate.
+          Sabey Corporation is a data center developer planning a campus of about nine hundred thousand square feet with power service of two hundred fifty megawatts. The figures sound dramatic in a sentence which is why they are repeated often.
         </p>
 
         <h2 class="text-2xl font-bold mt-6">Where</h2>
         <p class="text-slate-800">
-          The project site sits between Kentucky Avenue and Camby Road in Decatur Township. For many residents this area has been an open canvas for imagined projects which makes any specific proposal feel surprising no matter what it is.
+          The campus is proposed between Kentucky Avenue and Camby Road in Decatur Township. For many people the space has lived as open land and flexible imagination. Any specific project will feel like too much for someone.
         </p>
       </section>
 
-      <!-- WHY ARE RESIDENTS FIGHTING BACK -->
+      <!-- WHY -->
       <section class="space-y-4">
         <h2 class="text-2xl font-bold">Why are residents fighting back</h2>
         <p class="text-slate-800">
@@ -115,175 +147,153 @@
         <div class="space-y-4 text-slate-800 text-sm leading-relaxed">
 
           <div>
-            <h3 class="font-semibold">Bills may rise one day</h3>
+            <h3 class="font-semibold">Bills might rise</h3>
             <p>
-              It is predicted that electricity and water bills will rise. Predicted by whom depends on which story you hear. The idea that every future bill increase can be pinned on one project is simple and simple stories travel faster than rate case documents.
+              It is often said that electricity and water bills will rise because of this project. Bills rise for many reasons yet it is satisfying to point to one visible site and declare it the main character in every future rate case.
             </p>
           </div>
 
           <div>
-            <h3 class="font-semibold">Property value worries</h3>
+            <h3 class="font-semibold">Property value fears</h3>
             <p>
-              Some reports warn about property value loss while others quietly note that new infrastructure can support growth and stability. In discussion the version that produces the strongest feeling usually wins the night.
+              Some stories warn that values will fall. Others point out that long term investment and modern infrastructure can support stability and improvement. In public meetings the line that feels more urgent usually wins the microphone.
             </p>
           </div>
 
           <div>
-            <h3 class="font-semibold">Health and generator headlines</h3>
+            <h3 class="font-semibold">Health stories and backup generators</h3>
             <p>
-              Backup generators are described with lists of chemical names plus the word etc. The most alarming part is often the etc because it can hold whatever a reader already fears. In reality these units are limited by permits and test schedules. That detail rarely fits on a yard sign.
+              Backup generators are described with lists of chemicals and the word etc. The etc does much of the work. Actual operating limits and test schedules are less exciting than the idea of engines running all night in a permanent cloud.
             </p>
           </div>
 
           <div>
-            <h3 class="font-semibold">Noise in decibels</h3>
+            <h3 class="font-semibold">Noise</h3>
             <p>
-              Sixty five decibels is about the sound of a car passing by on a street yet it becomes a central figure in many stories. Concerns focus on fans and equipment but are quieter about traffic that already exists.
+              Concerns focus on equipment that may be heard at about the level of a passing car. Existing traffic roads and industrial activity that already live at that level fade into the background. New sound feels different even when measured the same.
             </p>
           </div>
 
           <div>
-            <h3 class="font-semibold">Light and sleep</h3>
+            <h3 class="font-semibold">Light</h3>
             <p>
-              Any new lighting can be framed as a threat to sleep even when designs use full cutoff fixtures timers and controls. Existing sources such as parking lots billboards and vehicle headlights are often treated as natural features of the landscape.
+              Any new lights can be described as a threat to sleep even when designs use full cutoff fixtures and controls. Familiar lights from parking lots billboards and vehicles are framed as part of the natural landscape.
             </p>
           </div>
         </div>
       </section>
 
       <!-- WHAT CAN I DO -->
-      <section class="space-y-4">
+      <section id="whatcanido" class="space-y-4">
         <h2 class="text-2xl font-bold">What can I do</h2>
         <p class="text-sm text-slate-700">
-          A practical guide for being very involved very loud and not especially informed.
+          A guide for being very involved very loud and not especially informed.
         </p>
 
         <ol class="space-y-3 text-sm text-slate-800 leading-relaxed">
 
           <li>
-            <strong>Attend every public meeting and ignore facts.</strong><br>
-            Bring printed talking points. Do not read staff reports. Do not listen. Interrupt politely at first then raise the volume until everyone is sure you are concerned.
+            <strong>Attend public meetings and ignore facts.</strong><br>
+            Bring printed talking points. Skip staff reports. Treat each presentation as an interruption to your speech.
           </li>
 
           <li>
-            <strong>Demand community input then reject every outcome.</strong><br>
-            Participate with enthusiasm. If the decision does not match your preference announce that the process was broken from the beginning.
+            <strong>Ask for community input then reject results.</strong><br>
+            Participate fully. If the final decision differs from your preference declare that the process never counted.
           </li>
 
           <li>
-            <strong>Chant slogans in place of questions.</strong><br>
-            Zoning and grid planning are hard. A short chant is easy. The shorter the phrase the more expert it sounds.
+            <strong>Use slogans instead of questions.</strong><br>
+            Detailed questions invite detailed answers. Short phrases fit better on signs and in short videos.
           </li>
 
           <li>
-            <strong>Coordinate applause boos and shared outrage.</strong><br>
-            Clap when someone repeats a rumor you like. Boo when someone quotes a technical study. Treat volume as evidence.
+            <strong>Coordinate applause and boos.</strong><br>
+            Clap when someone repeats a rumor you like. Boo when someone quotes a study. Months of analysis can be reduced to a sound effect.
           </li>
 
           <li>
-            <strong>Use dramatic gestures.</strong><br>
-            Holding hands and standing in silence does not change the vote but looks powerful in photos and in group chats.
+            <strong>Use dramatic poses.</strong><br>
+            Hold hands. Look upward. The vote count stays the same yet the photos look important.
           </li>
 
           <li>
-            <strong>Recruit friends who do not live here.</strong><br>
-            Invite people from outside the township who heard a summary from someone they trust. Local details are optional. Strong opinions are not.
+            <strong>Invite friends from other places.</strong><br>
+            Ask people with strong feelings and limited context to attend. Local details can be added later or not at all.
           </li>
 
           <li>
             <strong>Call disagreement hate.</strong><br>
-            If someone supports the project do not ask why. Assume the worst possible motive and move forward with confidence.
+            If someone supports the project assume they are against the community. Motives are faster than explanations.
           </li>
 
           <li>
-            <strong>Repeat the same claim after it is corrected.</strong><br>
-            If a statement is clear and alarming that matters more than whether it survived fact checking. Say it again so it feels established.
+            <strong>Repeat claims after they are corrected.</strong><br>
+            If a line is easy to remember and share it deserves another round even if slides at the meeting gave different information.
           </li>
 
           <li>
-            <strong>Accuse experts of lying then request more expert studies.</strong><br>
-            Dismiss the first report as biased. Ask for another one. Explain in advance that you already know how it will be slanted.
+            <strong>Accuse experts of lying while asking for more experts.</strong><br>
+            Dismiss the first report as biased. Request another one. Explain that you already know how it will be slanted.
           </li>
 
           <li>
-            <strong>Shout follow the money.</strong><br>
-            No need to specify which money or whose. A pointed finger and a serious tone are usually enough.
+            <strong>Use the phrase follow the money.</strong><br>
+            Point in a general direction. Do not specify who how or where. Let imagination do the rest.
           </li>
         </ol>
 
         <div class="bg-slate-100 border border-slate-200 rounded-md px-4 py-3 mt-3 text-xs text-slate-700 space-y-1">
           <p>
-            Real civic engagement usually works better with reading staff reports listening to answers and asking follow up questions. That approach produces fewer viral clips which is one reason it is used less often.
-          </p>
-          <p>
-            Common themes include participation without comprehension all emotion and no spreadsheets and the hope that enough volume will move reality.
+            Real civic work usually looks like reading long documents asking patient questions and listening to people who disagree. It does not fill group chats with clips which is part of why it happens quietly.
           </p>
         </div>
       </section>
 
       <!-- ABOUT THE PROJECT -->
-      <section class="space-y-4">
+      <section id="about" class="space-y-4">
         <h2 class="text-2xl font-bold">About the project</h2>
 
-        <p class="text-slate-800 text-sm">
-          The real site spends many paragraphs describing the project in strong language. Below is a calmer version that keeps the structure while translating some of the favorite phrases.
+        <p class="text-sm text-slate-800">
+          The original site describes the project with strong language about bills pollution water and noise. This section keeps the topics and adjusts the tone.
         </p>
 
         <h3 class="font-semibold mt-4">What is a data center</h3>
         <p class="text-sm text-slate-800">
-          A data center is a secure building filled with servers that run digital services. They rarely have windows and they rarely invite tours so they are often described as giant windowless warehouses to make them sound more mysterious.
+          A data center is a secure building full of servers that keep digital services running. Because the buildings are quiet and closed to visitors it is easy to describe them as giant windowless warehouses and let imagination do the rest.
         </p>
-
-        <div class="bg-slate-50 border border-slate-200 rounded-md px-4 py-3 text-xs text-slate-800 space-y-1 mt-2">
-          <p><strong>They say</strong> data centers are some of the most energy intensive facilities in the world.</p>
-          <p><strong>Translation</strong> the power usage is easy to measure and therefore easier to talk about than many other things that use power quietly and constantly in the background.</p>
-        </div>
 
         <h3 class="font-semibold mt-5">Bills and the word skyrocket</h3>
         <p class="text-sm text-slate-800">
-          The phrase skyrocket appears often. It suggests a single project will override every other factor that shapes bills such as fuel costs aging lines storms and statewide policy. It is dramatic and does not require a chart.
+          Many paragraphs claim that bills will sky rocket. The idea that one campus can carry all blame for future rate changes is simple and satisfying. It also avoids talking about aging lines storms fuel prices and other decisions that shape a bill.
         </p>
 
-        <div class="bg-slate-50 border border-slate-200 rounded-md px-4 py-3 text-xs text-slate-800 space-y-1 mt-2">
-          <p><strong>They say</strong> it will cost billions and will lead to sky rocketing bills for everyone.</p>
-          <p><strong>Translation</strong> we are combining every future grid investment into one number then placing that number at the gate of a single project.</p>
-        </div>
-
-        <h3 class="font-semibold mt-5">Water and very large ranges</h3>
+        <h3 class="font-semibold mt-5">Pollution and health framing</h3>
         <p class="text-sm text-slate-800">
-          A common line is that a single AI data center can use between one and five million gallons of water per day. That range stretches from small town to medium city so it covers almost any picture a reader already has in mind.
+          The project is linked to long chains of concern that include new power plants coal ash climate and regional air quality. Some of these topics are serious and deserve careful treatment. They can also be used as a list where every concern is attached to whichever project is being discussed that evening.
         </p>
 
-        <div class="bg-slate-50 border border-slate-200 rounded-md px-4 py-3 text-xs text-slate-800 space-y-1 mt-2">
-          <p><strong>They say</strong> water use could match a town of tens of thousands of people.</p>
-          <p><strong>Translation</strong> we are not distinguishing between designs that re use water in loops designs that use air cooling and designs that match the headline we like best.</p>
-        </div>
-
-        <h3 class="font-semibold mt-5">Noise and decibel charts</h3>
+        <h3 class="font-semibold mt-5">Water use</h3>
         <p class="text-sm text-slate-800">
-          Noise concerns focus on numbers like sixty five decibels into the night. The comparison that this is about as loud as a passing car is usually mentioned quietly if at all.
+          Common talking points say that a data center can use between one and five million gallons of water per day which covers almost every design imaginable. Designs that use air cooling or closed loop systems are often mentioned briefly or not at all because they complicate the headline.
         </p>
 
-        <div class="bg-slate-50 border border-slate-200 rounded-md px-4 py-3 text-xs text-slate-800 space-y-1 mt-2">
-          <p><strong>They say</strong> that at sixty five decibels people begin to face serious risk.</p>
-          <p><strong>Translation</strong> we are treating a widely used everyday noise level as an emergency because it suits the story.</p>
-        </div>
+        <h3 class="font-semibold mt-5">Noise and decibels</h3>
+        <p class="text-sm text-slate-800">
+          Noise is described with figures like sixty five decibels late at night. That level is roughly similar to traffic yet existing roads are treated as background while new equipment is treated as crisis. The number stays the same but the story around it changes.
+        </p>
 
         <h3 class="font-semibold mt-5">Jobs and expectations</h3>
         <p class="text-sm text-slate-800">
-          Much of the argument compares estimated data center jobs to a historic research park plan that was never built. It is easier to argue with a diagram from the past than with the possibility of an empty field.
-        </p>
-
-        <p class="text-sm text-slate-800 mt-3">
-          The same pattern appears in discussions of AI. Some say AI is a bubble and others see it as a major platform shift. Either way the local question is less about global hype and more about what kind of buildings will occupy the land.
+          The project is often compared to a research park that was once imagined for the site. The comparison is between a real proposal and a drawing that exists mainly in memory which is always a comfortable matchup for the drawing.
         </p>
       </section>
 
-      <!-- CALENDAR PARODY -->
-      <section class="space-y-4">
+      <!-- CALENDAR -->
+      <section id="calendar" class="space-y-4">
         <h2 class="text-2xl font-bold">Calendar of meetings</h2>
         <p class="text-sm text-slate-700">
-          The real site includes a very formal calendar with instructions on what to wear and when to arrive. This version keeps the structure and adjusts the priorities.
+          The original site lists meetings with detailed instructions. This version keeps the structure with slightly different priorities.
         </p>
 
         <div class="overflow-x-auto border border-slate-200 rounded-md text-sm">
@@ -292,29 +302,29 @@
               <tr>
                 <th class="border-b border-slate-200 text-left px-3 py-2">Date</th>
                 <th class="border-b border-slate-200 text-left px-3 py-2">Event</th>
-                <th class="border-b border-slate-200 text-left px-3 py-2">Official purpose</th>
-                <th class="border-b border-slate-200 text-left px-3 py-2">Priority</th>
+                <th class="border-b border-slate-200 text-left px-3 py-2">Purpose</th>
+                <th class="border-b border-slate-200 text-left px-3 py-2">Notes</th>
               </tr>
             </thead>
             <tbody>
               <tr class="align-top">
                 <td class="border-b border-slate-200 px-3 py-2">Public hearing</td>
-                <td class="border-b border-slate-200 px-3 py-2">Formal presentation and public comment</td>
+                <td class="border-b border-slate-200 px-3 py-2">Formal presentation and comment</td>
                 <td class="border-b border-slate-200 px-3 py-2">
-                  Hear staff reports ask questions and provide feedback that becomes part of the record.
+                  Staff present facts law and recommendations. Residents speak for or against.
                 </td>
                 <td class="border-b border-slate-200 px-3 py-2">
-                  Arrive early speak with confidence leave before detailed answers begin.
+                  Arrive early. Speak clearly. Stay long enough to hear answers even when they are complex.
                 </td>
               </tr>
               <tr class="align-top">
                 <td class="border-b border-slate-200 px-3 py-2">Community forum</td>
-                <td class="border-b border-slate-200 px-3 py-2">Open house style discussion</td>
+                <td class="border-b border-slate-200 px-3 py-2">Open house format</td>
                 <td class="border-b border-slate-200 px-3 py-2">
-                  Ask staff the same questions that are already on the project website.
+                  Ask project staff technical questions at topic tables.
                 </td>
                 <td class="border-b border-slate-200 px-3 py-2">
-                  Bring neighbors repeat key phrases wear matching shirts for photos.
+                  Bring curiosity. If you learn something new let it adjust your view even slightly.
                 </td>
               </tr>
               <tr class="align-top">
@@ -324,7 +334,7 @@
                   Commissioners vote after reviewing packets testimony and law.
                 </td>
                 <td class="px-3 py-2">
-                  If the vote matches your view say the people spoke. If not say the system failed.
+                  If the vote matches your view call it democracy at work. If not consider that democracy still happened.
                 </td>
               </tr>
             </tbody>
@@ -332,24 +342,24 @@
         </div>
 
         <p class="text-xs text-slate-600">
-          Attendance is encouraged. Listening is optional but highly recommended in practice.
+          Attendance is encouraged. Listening is strongly encouraged. Reading the packet is heroic.
         </p>
       </section>
 
-      <!-- ACTION CARDS -->
+      <!-- ACTION CARDS (DONATE, SIGN, ETC) -->
       <section class="space-y-4">
         <h2 class="text-2xl font-bold">Ways to get involved</h2>
         <p class="text-sm text-slate-700">
-          The real site offers a list of steps. This version keeps the list and adjusts the fine print.
+          Modeled on the original list with updated fine print.
         </p>
 
         <div class="grid md:grid-cols-2 gap-4 text-sm">
 
           <div class="border border-slate-200 rounded-md px-4 py-4 flex flex-col justify-between bg-slate-50">
             <div>
-              <h3 class="font-semibold mb-1">Donate to the cause</h3>
+              <h3 class="font-semibold mb-1">Donate</h3>
               <p class="text-slate-800">
-                Help support more clipboards printed flyers and coordinated colors. Most of the budget goes to materials that tell everyone more funding is needed.
+                Support more printed signs matching shirts and carefully worded posts. Most funding goes to visual proof that more funding is needed.
               </p>
             </div>
             <a href="#" onclick="return false;" class="mt-3 inline-flex justify-center rounded-md bg-red-700 text-white text-xs font-semibold px-3 py-2 cursor-default">
@@ -361,7 +371,7 @@
             <div>
               <h3 class="font-semibold mb-1">Request a yard sign</h3>
               <p class="text-slate-800">
-                Let neighbors know you care deeply about something that may be hard to explain in person.
+                Share a clear message with anyone who drives by even if conversations are less clear.
               </p>
               <ul class="list-disc list-inside text-slate-800 text-xs mt-1 space-y-1">
                 <li>NO do not ask me for details</li>
@@ -376,15 +386,12 @@
 
           <div class="border border-slate-200 rounded-md px-4 py-4 flex flex-col justify-between bg-slate-50">
             <div>
-              <h3 class="font-semibold mb-1">Email the city planner</h3>
+              <h3 class="font-semibold mb-1">Email the planner</h3>
               <p class="text-slate-800">
-                Use a template so you do not need to learn what a variance or a comprehensive plan is. Copy and paste. Change one adjective to make it feel personal.
+                Use a template that fits any project. Adjust one adjective to personalize it. Keep the same closing no matter what you learn.
               </p>
               <p class="text-xs italic text-slate-700 mt-2">
-                Sample opening line I am deeply concerned and demand action right away.
-              </p>
-              <p class="text-xs italic text-slate-700">
-                Bonus points if you copy people who are not part of the process and will be surprised to receive the message.
+                Sample line I am deeply concerned and request immediate action.
               </p>
             </div>
             <a href="#" onclick="return false;" class="mt-3 inline-flex justify-center rounded-md bg-red-700 text-white text-xs font-semibold px-3 py-2 cursor-default">
@@ -394,12 +401,12 @@
 
           <div class="border border-slate-200 rounded-md px-4 py-4 flex flex-col justify-between bg-slate-50">
             <div>
-              <h3 class="font-semibold mb-1">Sign the petition</h3>
+              <h3 class="font-semibold mb-1">Sign a petition</h3>
               <p class="text-slate-800">
-                Add your name to a growing list of people who strongly agree that something feels off even if reasons vary from person to person.
+                Add your name to a list that proves many people agree something feels wrong. Reasons can be filled in later.
               </p>
               <p class="text-xs text-slate-700 mt-1">
-                Facts are optional. Signatures feel official. Residency is not checked.
+                Facts optional. Signature permanent. Residency not checked.
               </p>
             </div>
             <a href="#" onclick="return false;" class="mt-3 inline-flex justify-center rounded-md bg-slate-900 text-white text-xs font-semibold px-3 py-2 cursor-default">
@@ -409,23 +416,23 @@
         </div>
       </section>
 
-      <!-- MORE RESOURCES PARODY -->
-      <section class="space-y-4">
-        <h2 class="text-2xl font-bold">More resources and favorite sources</h2>
+      <!-- MORE RESOURCES -->
+      <section id="resources" class="space-y-4">
+        <h2 class="text-2xl font-bold">More resources</h2>
         <p class="text-sm text-slate-700">
-          The original site lists long resource pages and behind the curtain explanations. This version notes the kinds of sources people rely on in practice.
+          The original site lists long chains of links and behind the curtain explanations. This version notes the types of sources people lean on in practice.
         </p>
 
         <div class="bg-slate-50 border border-slate-200 rounded-md px-4 py-4 text-xs text-slate-800 space-y-1">
-          <p>Screenshot of a comment thread saved as evidence</p>
-          <p>Spreadsheet called FINAL real data version seven</p>
-          <p>A video of a person in a truck explaining megawatts in under three minutes</p>
-          <p>A link that starts with study shows and ends with a paywall</p>
-          <p>A forwarded email with no author line but strong language</p>
+          <p>Screenshot of a long comment thread saved to a phone</p>
+          <p>Spreadsheet file named FINAL real data version seven</p>
+          <p>Short video where a person in a truck explains megawatts</p>
+          <p>Report summary shared without the charts that complicate it</p>
+          <p>Forwarded email with no author line and strong language</p>
         </div>
 
         <p class="text-xs text-slate-700 mt-3">
-          In addition people often point to prominent political and advocacy pages. Listed here as plain text only.
+          People also point to high profile advocacy and political pages. Listed here as plain text.
         </p>
 
         <div class="bg-slate-50 border border-slate-200 rounded-md px-4 py-4 text-xs text-slate-800 space-y-1">
@@ -438,9 +445,17 @@
         </div>
       </section>
 
+      <!-- CONTACT -->
+      <section id="contact" class="space-y-4">
+        <h2 class="text-2xl font-bold">Contact</h2>
+        <p class="text-sm text-slate-800">
+          For real questions about the project the most reliable path is to read official materials attend meetings and speak with staff who work on planning engineering and public health. For conversations about feelings talk with neighbors in good faith.
+        </p>
+      </section>
+
     </main>
 
-    <!-- FOOTER WITH DISCLAIMER -->
+    <!-- FOOTER -->
     <footer class="border-t border-slate-200 bg-slate-50 mt-12">
       <div class="content-width mx-auto px-4 py-6 text-xs text-slate-600 space-y-2">
         <p>
@@ -464,7 +479,6 @@
       var screen = document.getElementById("password-screen");
       var content = document.getElementById("site-content");
 
-      // If already unlocked this session show content
       if (sessionStorage.getItem("nddUnlocked") === "true") {
         screen.classList.add("hidden");
         content.classList.remove("hidden");
