@@ -1,11 +1,10 @@
-<!-- PASSWORD PROTECTION FOR ENTIRE SITE -->
+<!-- PASSWORD PROTECTION -->
 <script>
   const password = "decaturparody123";
   const unlocked = sessionStorage.getItem("siteUnlocked");
 
   if (!unlocked) {
     const input = prompt("Enter password to access this site:");
-
     if (input !== password) {
       alert("Incorrect password.");
       window.location.href = "https://google.com";
@@ -19,18 +18,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>No Data Decatur</title>
+  <title>No Data Decatur – About</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Preview and social metadata with no mention of parody -->
-  <meta name="description" content="No Data Decatur. Community commentary on AI data centers, public meetings, and civic reactions in Decatur Township.">
-  <meta property="og:title" content="No Data Decatur">
-  <meta property="og:description" content="Community commentary on AI data centers, public meetings, and civic reactions in Decatur Township.">
+  <meta name="description" content="Information about development activity, public reactions, and community concerns in Decatur Township.">
+  <meta property="og:title" content="No Data Decatur – About">
+  <meta property="og:description" content="Information about development activity, public reactions, and community concerns in Decatur Township.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://protectdecaturtownship.com">
-  <meta property="og:image" content="image1.jpg">
 
-  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
@@ -43,334 +38,169 @@
 <body class="bg-white text-slate-900">
 
   <!-- HEADER -->
-  <header class="bg-red-700 text-white py-6">
-    <div class="max-w-5xl mx-auto px-4 space-y-2">
-      <p class="text-xs uppercase tracking-wide opacity-80">
-        For anyone new to civic debates this is satire that exaggerates familiar behavior when people have not read the staff report.
-      </p>
-      <h1 class="text-3xl font-bold">
-        Protecting Our Community Against 900000 square feet of AI Data Center
-      </h1>
-      <p class="text-xs opacity-80">
-        A send up of performative outrage and unresearched opposition
+  <header class="bg-red-700 text-white py-6 mb-10">
+    <div class="max-w-4xl mx-auto px-4">
+      <h1 class="text-3xl font-bold">About What Is Happening</h1>
+      <p class="text-xs opacity-80 mt-1">
+        A closer look at the concerns people repeat most often
       </p>
     </div>
   </header>
 
-  <!-- GALLERY -->
-  <section class="max-w-5xl mx-auto px-4 py-10">
-    <div class="grid md:grid-cols-3 gap-6">
-      <img src="image1.jpg" class="w-full h-48 object-cover rounded-lg border" alt="Project image one">
-      <img src="image2.jpg" class="w-full h-48 object-cover rounded-lg border" alt="Project image two">
-      <img src="image3.jpg" class="w-full h-48 object-cover rounded-lg border" alt="Project image three">
-    </div>
-  </section>
+  <main class="max-w-4xl mx-auto px-4 pb-20">
 
-  <main class="max-w-5xl mx-auto px-4 space-y-12 pb-20">
-
-    <!-- WHAT / WHERE -->
-    <section class="space-y-4">
-      <h2 class="text-2xl font-bold">What</h2>
+    <!-- SECTION: WHAT IS HAPPENING -->
+    <section class="space-y-4 mb-10">
+      <h2 class="text-2xl font-bold">What is happening</h2>
       <p class="text-slate-800">
-        Sabey Corporation is a data center company that plans a nine hundred thousand square foot two hundred fifty Megawatt data center campus.
+        Sabey Corporation plans to build a nine hundred thousand square foot data center campus between Kentucky Avenue and Camby Road. The project would use two hundred fifty megawatts of electric power which is a popular number for people to repeat when they want to sound informed.
       </p>
-
-      <h2 class="text-2xl font-bold mt-6">Where</h2>
       <p class="text-slate-800">
-        Between Kentucky Avenue and Camby Road in Decatur Township in Indiana.
+        The size is large and the number is round which helps it travel well in group texts.
       </p>
     </section>
 
-    <!-- WHAT CAN I DO -->
-    <section class="space-y-4">
-      <h2 class="text-2xl font-bold">What can I do</h2>
-
-      <p class="text-sm text-slate-700">
-        A guide for the very concerned resident who prefers emotion over evidence.
-      </p>
-
-      <ol class="space-y-4 text-slate-800 leading-relaxed">
-        <li>
-          <strong>1. Attend every public meeting and ignore facts.</strong><br>
-          Bring pre printed talking points. Do not read staff reports. Do not listen. Interrupt politely at first then loudly.
-        </li>
-
-        <li>
-          <strong>2. Demand community input then reject every outcome.</strong><br>
-          Join the process until the result feels wrong. Then claim the process was unfair from the start.
-        </li>
-
-        <li>
-          <strong>3. Chant slogans instead of asking questions.</strong><br>
-          Zoning utilities and environmental controls are complex. A loud chant is simpler.
-        </li>
-
-        <li>
-          <strong>4. Coordinate applause boos and synchronized outrage.</strong><br>
-          Clap in the middle of answers. Cheer when someone repeats a rumor. Boo when someone reads from the staff report.
-        </li>
-
-        <li>
-          <strong>5. Hold hands for dramatic effect.</strong><br>
-          This does not change the vote. It photographs well in a group text and on social feeds.
-        </li>
-
-        <li>
-          <strong>6. Recruit friends from outside the community.</strong><br>
-          A local issue is no barrier. Bring people who have never been here and feel extremely sure of their opinion.
-        </li>
-
-        <li>
-          <strong>7. Call disagreement hate.</strong><br>
-          If someone supports the project do not debate. Assign a motive and move on.
-        </li>
-
-        <li>
-          <strong>8. Repeat claims after they are corrected.</strong><br>
-          If a claim is simple and viral that matters more than accuracy. Share it again.
-        </li>
-
-        <li>
-          <strong>9. Accuse experts of lying then demand new expert studies.</strong><br>
-          Dismiss the first study. Ask for another study. Announce in advance that you do not trust the second study either.
-        </li>
-
-        <li>
-          <strong>10. Shout follow the money.</strong><br>
-          No need to say whose money or where it goes. A vague gesture toward the ceiling is enough.
-        </li>
-
-        <li>
-          <strong>11. Attend public meetings but promise yourself you will not ask questions.</strong><br>
-          Listening might change your mind. It is safer to arrive upset and leave early.
-        </li>
-
-        <li>
-          <strong>12. Bring flyers that contradict each other.</strong><br>
-          One flyer says the project is too big. Another flyer says no one will ever use it. Hand out both.
-        </li>
-      </ol>
-
-      <div class="bg-slate-100 border rounded-lg p-4 mt-4 text-sm text-slate-700 space-y-2">
-        <p>
-          <strong>Important note</strong><br>
-          Real civic engagement works better with listening reading the staff report and honest discussion. That has less drama. So we are not doing that here.
-        </p>
-        <div class="text-xs space-y-1 mt-2">
-          <p>Participation without comprehension.</p>
-          <p>All emotion and no spreadsheets.</p>
-          <p>If we are loud enough maybe reality will move.</p>
-          <p>Democracy but only if we win.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- WHY ARE RESIDENTS FIGHTING BACK -->
-    <section class="space-y-4">
-      <h2 class="text-2xl font-bold">Why are residents fighting back</h2>
-
+    <!-- SECTION: WHAT IS A DATA CENTER -->
+    <section class="space-y-4 mb-10">
+      <h2 class="text-2xl font-bold">What is a data center</h2>
       <p class="text-slate-800">
-        Because progress is inconvenient.
+        A data center is a secure windowless building filled with computers. It is not designed for guests tours or retail shopping so people often find this suspicious.
       </p>
-
-      <div class="space-y-6 text-slate-800">
-
-        <div>
-          <h3 class="font-semibold">Higher electricity and water bills maybe one day</h3>
-          <p>
-            Many people prefer an older grid that feels familiar. Modern infrastructure might remove the surprise of outages and last minute repairs that everyone talks about.
-          </p>
-        </div>
-
-        <div>
-          <h3 class="font-semibold">Property values might rise and that feels scary</h3>
-          <p>
-            Rising property values could grow equity attract reinvestment and support better public services.
-            Decline is familiar. Growth is new. New is hard.
-          </p>
-        </div>
-
-        <div>
-          <h3 class="font-semibold">Health risks that are theoretical and selective</h3>
-          <p>
-            Backup generators run for short periods with strict rules. It is more exciting to imagine a permanent cloud that hangs over the township.
-            Highways warehouses and trucks feel normal so the concern moves to the new thing.
-          </p>
-        </div>
-
-        <div>
-          <h3 class="font-semibold">Noise concerns</h3>
-          <p>
-            Quiet sealed buildings with limited trips somehow feel wrong.
-            Constant truck traffic backup beeping and overnight loading docks feel like real industry.
-          </p>
-        </div>
-
-        <div>
-          <h3 class="font-semibold">Light at night</h3>
-          <p>
-            Security lighting that meets code and turns off when not needed feels suspicious.
-            Dim broken lights and dark corners feel authentic and do not require change.
-          </p>
-        </div>
-
-        <div>
-          <h3 class="font-semibold">Additional concerns that might be raised</h3>
-          <ul class="list-disc list-inside space-y-1 text-sm">
-            <li>Concern about too many engineers per person.</li>
-            <li>Concern that town hall behavior might become very polite.</li>
-            <li>Concern that children might learn how the power grid works.</li>
-            <li>Concern that someone says data center instead of warehouse and that ruins the mood.</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="pt-6 border-t mt-6 text-slate-800 space-y-3">
-        <div>
-          <h3 class="font-semibold">Our real concern if we are honest</h3>
-          <ul class="list-disc list-inside space-y-1 text-sm">
-            <li>More jobs feel too steady and too stable.</li>
-            <li>More tax revenue is unsettling because it might help schools police and fire.</li>
-            <li>Better infrastructure feels suspicious because it looks like planning.</li>
-            <li>Preparing for an AI driven economy sounds difficult and new.</li>
-            <li>Anything new especially if it works feels like too much change at once.</li>
-          </ul>
-        </div>
-
-        <div>
-          <h3 class="font-semibold">In summary</h3>
-          <p>
-            We are not against data centers in theory.
-            We are in favor of decline of the status quo and of complaint.
-            We will resist progress quietly loudly and most of all online.
-          </p>
-        </div>
-      </div>
+      <p class="text-slate-800">
+        These computers store and manage information for everything from email to streaming to weather alerts. In short they make modern life work which can create discomfort because they are not very visible until someone proposes one nearby.
+      </p>
+      <p class="text-slate-800">
+        Some call them warehouses of the cloud which sounds dramatic and helps set the tone for many discussions.
+      </p>
     </section>
 
-    <!-- SOCIAL MEDIA BEHAVIOR -->
-    <section class="space-y-4">
-      <h2 class="text-2xl font-bold">How to stay informed online</h2>
-      <p class="text-sm text-slate-700">
-        Meaning how to stay permanently upset.
+    <!-- SECTION: IMPACT -->
+    <section class="space-y-4 mb-10">
+      <h2 class="text-2xl font-bold">What will be the impact</h2>
+      <p class="text-slate-800">
+        There are many claims about the impact of data centers. Some are factual some are speculative and some are repeated often enough that they begin to sound like fact even when they are not reviewed.
       </p>
+
+      <h3 class="font-semibold mt-4">Utility costs</h3>
+      <p class="text-slate-800">
+        One concern is that the project will cause utility bills to skyrocket across Indiana. This assumes every infrastructure upgrade in the state occurs solely to serve one project and that no other economic development has ever used power before. It is a simple narrative and simple narratives are easy to share.
+      </p>
+
+      <h3 class="font-semibold mt-4">Pollution and health</h3>
+      <p class="text-slate-800">
+        Another concern is that backup generators create constant pollution. In reality they are used only for testing and emergencies but imagining them running nonstop creates a more powerful emotional response. It also helps people ignore the air quality impacts from sources that already exist like highways warehouses and everyday traffic.
+      </p>
+
+      <h3 class="font-semibold mt-4">Water use</h3>
+      <p class="text-slate-800">
+        Data centers use water for cooling. So do power plants golf courses and many industrial facilities. The difference is that water use from data centers is new to some people so it feels more threatening even when actual usage numbers vary by design and technology.
+      </p>
+
+      <h3 class="font-semibold mt-4">Noise</h3>
+      <p class="text-slate-800">
+        These projects generally operate within required decibel limits but noise remains a compelling concern because everyone understands noise. Saying sixty five decibels also sounds technical which helps give arguments an authoritative feel.
+      </p>
+    </section>
+
+    <!-- SECTION: WHAT IS SABEY -->
+    <section class="space-y-4 mb-10">
+      <h2 class="text-2xl font-bold">What is Sabey Corporation</h2>
+      <p class="text-slate-800">
+        Sabey Corporation is a developer that builds data centers for companies that need significant computing capacity. Their clients include large well known technology firms which makes them an easier target for criticism because people often react more strongly to brands than to zoning maps.
+      </p>
+      <p class="text-slate-800">
+        These facilities do not require many on site employees which surprises people and leads to claims that data centers create no jobs. The reality is that they create fewer jobs than a research park but more jobs than an empty field and fewer headaches than a heavy industrial use.
+      </p>
+    </section>
+
+    <!-- SECTION: JOBS -->
+    <section class="space-y-4 mb-10">
+      <h2 class="text-2xl font-bold">Will Sabey generate jobs</h2>
+      <p class="text-slate-800">
+        Sabey estimates around one hundred direct jobs for their campus. This is often compared to early projections for a research and development park that was never built. Using the highest job estimate from the unbuilt project helps strengthen arguments but does not reflect what actually exists on the land today.
+      </p>
+      <p class="text-slate-800">
+        Indirect jobs also occur through construction suppliers maintenance and other services though exact numbers depend on actual economic activity rather than slogans.
+      </p>
+    </section>
+
+    <!-- SECTION: AI -->
+    <section class="space-y-4 mb-10">
+      <h2 class="text-2xl font-bold">What does this have to do with AI</h2>
+      <p class="text-slate-800">
+        Artificial intelligence requires significant computing power which requires data centers. Many companies invest in AI because they believe it will improve their products or operations. Others invest because they fear falling behind competitors. The conversation sounds more ominous when framed as unstoppable forces reshaping daily life.
+      </p>
+      <p class="text-slate-800">
+        The important part for local discussion is that AI workloads increase demand for data infrastructure which makes these facilities more common across the country.
+      </p>
+    </section>
+
+    <!-- SECTION: SABEY POSITIVE INFO -->
+    <section class="space-y-4 mb-10">
+      <h2 class="text-2xl font-bold">Why does Sabey have positive information on their website</h2>
+      <p class="text-slate-800">
+        Companies present themselves in the best light possible. This is true for Sabey and it is true for opponents who highlight only negative possibilities. Most public debates involve both optimism and pessimism which means the truth usually sits quietly in the middle.
+      </p>
+      <p class="text-slate-800">
+        Many online summaries about data centers including AI generated text simplify issues and remove context which is why reviewing primary documents remains the best practice even if it is rarely the most popular.
+      </p>
+    </section>
+
+    <!-- SECTION: WHAT CAN I DO TO FIGHT BACK -->
+    <section class="space-y-4 mb-10">
+      <h2 class="text-2xl font-bold">What can I do to fight back</h2>
+      <p class="text-slate-800">
+        Opposition groups suggest attending meetings signing petitions emailing planners and displaying yard signs. These actions help demonstrate community engagement but they also create feedback loops where the same talking points circulate without new information.
+      </p>
+
       <ul class="list-disc list-inside text-sm text-slate-800 space-y-1">
-        <li>Post first and read later.</li>
-        <li>If you did not screenshot a comment it never took place.</li>
-        <li>Assume every comment is about you personally.</li>
-        <li>Share the same headline three times and call that research.</li>
-        <li>Tell people to do their own research while you avoid the staff report.</li>
+        <li>Attend meetings and participate respectfully though many prefer to arrive upset and leave early.</li>
+        <li>Sign petitions which signal concern even if the reasons vary widely.</li>
+        <li>Email planners which can be helpful though templates often repeat misunderstandings.</li>
+        <li>Display yard signs which create visual solidarity and also create interesting conversations with neighbors.</li>
       </ul>
+
+      <p class="text-slate-800">
+        Checking meeting dates on multiple sources is wise because schedules change and rumors often travel faster than official updates.
+      </p>
     </section>
 
-    <!-- ACTIONS / CARDS -->
-    <section class="space-y-6">
-      <h2 class="text-2xl font-bold">What else can I do</h2>
-      <p class="text-sm text-slate-700">
-        Pick your favorite way to express strong feelings without reading the full packet.
+    <!-- SECTION: MORE RESOURCES -->
+    <section class="space-y-4 mb-10">
+      <h2 class="text-2xl font-bold">More resources</h2>
+      <p class="text-slate-800">
+        Below are articles and videos often shared in discussions. They are listed here as plain text and not as links.
       </p>
 
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-
-        <!-- Donate -->
-        <div class="border p-5 rounded-lg bg-slate-50 flex flex-col justify-between">
-          <div class="space-y-2">
-            <h3 class="font-semibold text-base">Donate to the cause</h3>
-            <p class="text-sm">
-              Help fund more clipboards matching shirts and printed outrage graphics.
-              All support goes to vibes slogans and printing the same flyer again.
-            </p>
-          </div>
-          <a href="#" class="block text-center bg-red-700 text-white mt-4 py-2 rounded-md text-xs font-semibold cursor-default">
-            DONATE
-          </a>
-        </div>
-
-        <!-- Yard Sign -->
-        <div class="border p-5 rounded-lg bg-slate-50 flex flex-col justify-between">
-          <div class="space-y-2">
-            <h3 class="font-semibold text-base">Request a yard sign</h3>
-            <p class="text-sm">
-              Let neighbors know where you stand without needing a full explanation.
-            </p>
-            <ul class="list-disc list-inside text-sm">
-              <li>NO do not ask me for details.</li>
-              <li>SAVE OUR COMMUNITY.</li>
-              <li>I READ THE HEADLINE.</li>
-            </ul>
-          </div>
-          <a href="#" class="block text-center bg-black text-white mt-4 py-2 rounded-md text-xs font-semibold cursor-default">
-            REQUEST A YARD SIGN
-          </a>
-        </div>
-
-        <!-- Email Planner -->
-        <div class="border p-5 rounded-lg bg-slate-50 flex flex-col justify-between">
-          <div class="space-y-2">
-            <h3 class="font-semibold text-base">Email the city planner</h3>
-            <p class="text-sm">
-              Use a template so you do not need to understand the project in detail.
-              Copy paste and send. Reading is optional.
-            </p>
-            <p class="italic text-xs mt-1">
-              I am deeply concerned and demand action right now.
-            </p>
-            <p class="italic text-xs">
-              Bonus points if you copy people who are not involved and will be confused.
-            </p>
-          </div>
-          <a href="#" class="block text-center bg-red-700 text-white mt-4 py-2 rounded-md text-xs font-semibold cursor-default">
-            EMAIL THE CITY PLANNER
-          </a>
-        </div>
-
-        <!-- Petition -->
-        <div class="border p-5 rounded-lg bg-slate-50 flex flex-col justify-between">
-          <div class="space-y-2">
-            <h3 class="font-semibold text-base">Sign the petition</h3>
-            <p class="text-sm">
-              Join people who agree that something feels wrong even if no one can explain it.
-            </p>
-            <p class="text-sm">
-              Facts are optional. Signatures feel permanent.
-            </p>
-            <p class="text-sm">
-              Signing does not require residency or follow up.
-            </p>
-          </div>
-          <a href="#" class="block text-center bg-black text-white mt-4 py-2 rounded-md text-xs font-semibold cursor-default">
-            SIGN THE PETITION
-          </a>
-        </div>
+      <div class="bg-slate-50 rounded-lg border p-4 text-xs text-slate-800 space-y-1">
+        <p>https://example.com/local-news-one</p>
+        <p>https://example.com/local-news-two</p>
+        <p>https://example.com/data-center-analysis</p>
+        <p>https://example.com/civic-meeting-video</p>
+        <p>https://example.com/economic-impact-report</p>
       </div>
     </section>
 
-    <!-- INFLUENCES LIST (TEXT ONLY, NOT CLICKABLE) -->
-    <section class="space-y-3">
-      <h2 class="text-2xl font-bold">Influences and references</h2>
-      <p class="text-sm text-slate-700">
-        These pages live in the wider world of political and civic content.
-  
+    <!-- SECTION: BEHIND THE CURTAIN -->
+    <section class="space-y-4 mb-10">
+      <h2 class="text-2xl font-bold">Behind the curtain</h2>
+      <p class="text-slate-800">
+        Discussions sometimes include references to financial firms utilities and political players. These dynamics can be complex. They also make strong material for dramatic storytelling which is why they appear frequently in public comments.
       </p>
-      <div class="bg-slate-50 border rounded-lg p-4 text-xs text-slate-800 space-y-1">
-        <p>https://perfectunion.us/about/</p>
-        <p>https://www.instagram.com/berniesanders/</p>
-        <p>https://en.wikipedia.org/wiki/Mayoralty_of_Zohran_Mamdani</p>
-        <p>https://www.instagram.com/zohrankmamdani/</p>
-        <p>https://www.opensocietyfoundations.org/</p>
-        <p>https://en.wikipedia.org/wiki/Solidarity_(United_States)</p>
-      </div>
+      <p class="text-slate-800">
+        People often express worry about large investment companies especially when they do not fully understand how utility regulation works. These concerns are understandable but often simplified into narratives that emphasize fear rather than policy.
+      </p>
     </section>
 
   </main>
 
   <!-- FOOTER -->
   <footer class="bg-slate-100 py-10 px-4 mt-16">
-    <div class="max-w-5xl mx-auto text-xs text-slate-600 space-y-3">
+    <div class="max-w-4xl mx-auto text-xs text-slate-600 space-y-3">
       <p>
         Disclaimer:
         This website is a work of satire and parody that is meant for humor and commentary.
-        It does not present factual claims real instructions or official positions of any person or organization.
+        It does not present factual claims real instructions or official positions.
       </p>
       <p>
         This is protected speech under the First Amendment of the United States Constitution.
@@ -380,3 +210,4 @@
 
 </body>
 </html>
+
