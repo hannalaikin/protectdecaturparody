@@ -2,517 +2,620 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Protect Decatur Township | Join the fight against the AI Data Center</title>
+  <title>Protect Decatur Township – Join the fight against the AI Data Center</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Neutral preview metadata -->
-  <meta name="description" content="Information and commentary about a proposed data center project in Decatur Township.">
-  <meta property="og:title" content="Protect Decatur Township">
-  <meta property="og:description" content="Information and commentary about a proposed data center project in Decatur Township.">
-  <meta property="og:type" content="website">
-
-  <!-- Tailwind CDN -->
+  <!-- Basic neutral styling via Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
     body {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
-    .content-width {
-      max-width: 800px;
+
+    /* Password gate overlay */
+    #password-gate {
+      position: fixed;
+      inset: 0;
+      background: radial-gradient(circle at top, #f97373 0, #111827 55%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 50;
+    }
+    #password-gate.hidden {
+      display: none;
     }
   </style>
 </head>
-
 <body class="bg-white text-slate-900">
 
-  <!-- PASSWORD SCREEN -->
-  <div id="password-screen" class="min-h-screen flex items-center justify-center bg-slate-100 px-4">
-    <div class="content-width w-full bg-white border border-slate-200 rounded-lg shadow-sm px-6 py-8">
-      <h1 class="text-xl font-semibold mb-4 text-slate-900">
-        Enter password to view this site
+  <!-- Password gate -->
+  <div id="password-gate">
+    <div class="w-full max-w-md mx-auto bg-white/95 rounded-2xl shadow-xl p-8 border border-slate-200">
+      <h1 class="text-xl font-semibold text-slate-900 mb-2 text-center">
+        Protect Decatur Township
       </h1>
-      <p class="text-sm text-slate-600 mb-4">
-        This page contains commentary about a proposed project in Decatur Township.
+      <p class="text-sm text-slate-600 mb-6 text-center">
+        This page contains opinion content about local development.
+        Enter the password to continue.
       </p>
       <form id="password-form" class="space-y-4">
         <div>
-          <label for="password-input" class="block text-sm font-medium text-slate-700 mb-1">
+          <label for="password-input" class="block text-xs font-medium text-slate-700 mb-1">
             Password
           </label>
           <input
             id="password-input"
             type="password"
-            class="w-full border border-slate-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring focus:ring-red-500 focus:border-red-500"
+            class="w-full rounded-md border border-slate-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500"
             autocomplete="off"
           >
         </div>
+        <p id="password-error" class="text-xs text-red-600 h-4"></p>
         <button
           type="submit"
-          class="inline-flex items-center justify-center rounded-md bg-red-700 text-white text-sm font-semibold px-4 py-2"
+          class="w-full rounded-md bg-red-600 text-white text-sm font-semibold py-2.5 hover:bg-red-700 transition"
         >
-          Submit
+          Enter
         </button>
-        <p id="password-error" class="text-xs text-red-600 mt-2 hidden">
-          Incorrect password. Please try again.
-        </p>
       </form>
     </div>
   </div>
 
-  <!-- MAIN CONTENT -->
-  <div id="site-content" class="hidden">
+  <!-- Site shell -->
+  <div id="site-root" class="min-h-screen bg-white text-slate-900">
 
-    <!-- SITE HEADER WITH NAV -->
-    <header id="home" class="bg-white border-b border-slate-300">
-      <div class="max-w-6xl mx-auto px-4 py-6 flex items-center justify-between">
-        <!-- Site title -->
-        <div class="text-3xl font-light tracking-tight">
-          Protect Decatur Township
+    <!-- Header -->
+    <header class="border-b border-slate-200 bg-white sticky top-0 z-30">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between gap-4">
+        <div>
+          <div class="text-sm font-semibold tracking-tight">
+            Protect Decatur Township
+          </div>
+          <div class="text-[11px] text-slate-500">
+            Join the fight against the AI data center
+          </div>
         </div>
 
-        <!-- Nav -->
-        <nav class="flex items-center space-x-8 text-lg">
-          <a href="#home" class="text-slate-900 hover:text-slate-600">Home</a>
-
-          <div class="relative group">
-            <button class="flex items-center space-x-1 text-slate-900 hover:text-slate-600">
-              <span>About</span>
-              <span style="font-size:14px;">▾</span>
-            </button>
-            <div class="absolute hidden group-hover:block bg-white border border-slate-200 shadow-sm rounded-sm mt-2 py-2 w-44 z-20">
-              <a href="#about" class="block px-4 py-1 text-sm hover:bg-slate-100">About the Project</a>
-              <a href="#resources" class="block px-4 py-1 text-sm hover:bg-slate-100">More Resources</a>
-            </div>
-          </div>
-
-          <a href="#calendar" class="text-slate-900 hover:text-slate-600">Calendar</a>
-          <a href="#contact" class="text-slate-900 hover:text-slate-600">Contact</a>
+        <nav class="hidden md:flex items-center gap-4 text-xs font-medium">
+          <a href="#top" class="hover:text-red-700">Home</a>
+          <a href="#about" class="hover:text-red-700">About</a>
+          <a href="#why" class="hover:text-red-700">Why Residents “Fight Back”</a>
+          <a href="#actions" class="hover:text-red-700">What Can I Do</a>
+          <a href="#calendar" class="hover:text-red-700">Calendar</a>
+          <a href="#resources" class="hover:text-red-700">More Resources</a>
         </nav>
+
+        <button
+          id="mobileToggle"
+          class="md:hidden inline-flex items-center justify-center rounded-md border border-slate-300 px-3 py-1 text-xs"
+        >
+          Menu
+        </button>
       </div>
-      <div class="w-full border-t border-slate-300"></div>
+
+      <!-- Mobile nav -->
+      <nav id="mobileNav" class="hidden md:hidden border-t border-slate-200 bg-white">
+        <div class="max-w-4xl mx-auto px-4 py-3 flex flex-col gap-2 text-xs font-medium">
+          <a href="#top" class="hover:text-red-700">Home</a>
+          <a href="#about" class="hover:text-red-700">About</a>
+          <a href="#why" class="hover:text-red-700">Why Residents “Fight Back”</a>
+          <a href="#actions" class="hover:text-red-700">What Can I Do</a>
+          <a href="#calendar" class="hover:text-red-700">Calendar</a>
+          <a href="#resources" class="hover:text-red-700">More Resources</a>
+        </div>
+      </nav>
     </header>
 
-    <!-- HERO -->
-    <section class="content-width mx-auto px-4 pt-8 pb-4">
-      <h1 class="text-3xl font-bold mb-3">
-        Protecting Our Community Against 900,000 sq. ft. AI Data Center
-      </h1>
-      <p class="text-sm text-slate-700">
-        A straight faced look at how big numbers and future scenarios are used when a new building appears on the map.
-      </p>
-    </section>
+    <main id="top" class="pb-16">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 pt-8 space-y-10">
 
-    <!-- GALLERY -->
-    <section class="content-width mx-auto px-4 pb-8">
-      <div class="grid md:grid-cols-3 gap-4">
-        <div class="border border-slate-200 rounded-md overflow-hidden">
-          <img src="image1.jpg" alt="Project related image one" class="w-full h-40 object-cover">
-        </div>
-        <div class="border border-slate-200 rounded-md overflow-hidden">
-          <img src="image2.jpg" alt="Project related image two" class="w-full h-40 object-cover">
-        </div>
-        <div class="border border-slate-200 rounded-md overflow-hidden">
-          <img src="image3.jpg" alt="Project related image three" class="w-full h-40 object-cover">
-        </div>
-      </div>
-    </section>
-
-    <!-- MAIN COLUMN -->
-    <main class="content-width mx-auto px-4 pb-16 space-y-10">
-
-      <!-- WHAT / WHERE -->
-      <section class="space-y-3">
-        <h2 class="text-2xl font-bold">What</h2>
-        <p class="text-slate-800">
-          Sabey Corporation is a data center developer planning a campus of about nine hundred thousand square feet with power service of two hundred fifty megawatts. The figures sound dramatic in a sentence which is why they are repeated often.
-        </p>
-
-        <h2 class="text-2xl font-bold mt-6">Where</h2>
-        <p class="text-slate-800">
-          The campus is proposed between Kentucky Avenue and Camby Road in Decatur Township. For many people the space has lived as open land and flexible imagination. Any specific project will feel like too much for someone.
-        </p>
-      </section>
-
-      <!-- WHY ARE RESIDENTS FIGHTING BACK -->
-      <section class="space-y-4">
-        <h2 class="text-2xl font-bold">Why are residents “fighting back”?</h2>
-        <p class="text-slate-800">
-          Because progress is inconvenient.
-        </p>
-
-        <div class="space-y-4 text-slate-800 text-sm leading-relaxed">
-
-          <div>
-            <h3 class="font-semibold">Higher electricity &amp; water bills (maybe, someday)</h3>
-            <p>
-              We prefer an aging grid held together with duct tape.
-              Modern infrastructure threatens the comfort of rolling blackouts, surprise outages, and infrastructure failures we’ve grown used to.
-            </p>
-          </div>
-
-          <div>
-            <h3 class="font-semibold">Property values might go up — and that’s a problem</h3>
-            <p>
-              Rising property values could:
-            </p>
-            <ul class="list-disc list-inside mt-1">
-              <li>Increase equity</li>
-              <li>Attract reinvestment</li>
-              <li>Improve public services</li>
-            </ul>
-            <p class="mt-1">
-              Naturally, we oppose all of that. Decline is predictable. Growth is scary.
-            </p>
-          </div>
-
-          <div>
-            <h3 class="font-semibold">Health risks</h3>
-            <p>
-              Although backup generators run rarely and under strict regulations, we prefer to imagine them operating 24/7 in a permanent cloud of doom.
-              Actual nearby highways, warehouses, delivery trucks, and existing industrial uses are familiar — and therefore harmless.
-            </p>
-          </div>
-
-          <div>
-            <h3 class="font-semibold">Noise concerns</h3>
-            <p>Quiet, enclosed buildings with limited traffic are unacceptable.</p>
-            <p>We strongly favor:</p>
-            <ul class="list-disc list-inside mt-1">
-              <li>Constant diesel truck traffic</li>
-              <li>Backup beeping</li>
-              <li>Overnight loading docks</li>
-            </ul>
-            <p class="mt-1">
-              Those noises feel more authentic.
-            </p>
-          </div>
-
-          <div>
-            <h3 class="font-semibold">Light pollution</h3>
-            <p>
-              Security lighting that meets code and shuts down when not needed is deeply offensive.
-              We prefer the warm glow of underfunded streetlights, broken fixtures, and dark corridors that discourage walking and safety.
-            </p>
-          </div>
-        </div>
-
-        <div class="space-y-2 text-slate-800 text-sm leading-relaxed mt-4">
-          <div>
-            <h3 class="font-semibold">Our real concern (just being honest)</h3>
-            <ul class="list-disc list-inside mt-1">
-              <li>We oppose high-paying jobs</li>
-              <li>We oppose lower traffic than warehouses</li>
-              <li>We oppose new tax revenue for schools, police, and fire</li>
-              <li>We oppose planning for the AI-driven economy</li>
-              <li>We oppose anything new, especially if it works</li>
-            </ul>
-            <p class="mt-1">
-              Change is risky. Stagnation feels familiar.
-            </p>
-          </div>
-
-          <div>
-            <h3 class="font-semibold">In summary</h3>
-            <p>
-              We are not anti–data center.
-              We are pro-decline, pro-status quo, and pro-complaint.
-              And we will fight progress — quietly, loudly, and on the internet.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- WHAT CAN I DO -->
-      <section id="whatcanido" class="space-y-4">
-        <h2 class="text-2xl font-bold">WHAT CAN I DO?</h2>
-
-        <ol class="space-y-3 text-sm text-slate-800 leading-relaxed">
-
-          <li>
-            <strong>1. Attend every public meeting—prepared to ignore facts.</strong><br>
-            Bring pre-printed talking points. Do not read staff reports. Do not listen. Interrupt politely at first, then loudly.
-          </li>
-
-          <li>
-            <strong>2. Demand “community input,” then reject all outcomes.</strong><br>
-            Participate enthusiastically—unless the decision doesn’t go your way. In that case, claim the process was rigged.
-          </li>
-
-          <li>
-            <strong>3. Chant slogans instead of asking questions.</strong><br>
-            Complex topics like zoning, utilities, or environmental controls are best addressed with yelling.
-          </li>
-
-          <li>
-            <strong>4. Coordinate applause, boos, and synchronized outrage.</strong><br>
-            Bonus points if you clap mid-sentence while someone else is speaking.
-          </li>
-
-          <li>
-            <strong>5. Hold hands dramatically.</strong><br>
-            It doesn’t change the vote, but it photographs well.
-          </li>
-
-          <li>
-            <strong>6. Recruit friends from outside the community.</strong><br>
-            Local issue? No problem. Bring reinforcements who’ve never been here but feel very strongly anyway.
-          </li>
-
-          <li>
-            <strong>7. Label disagreement as “hate.”</strong><br>
-            If someone supports the project, don’t debate them—assign a motive.
-          </li>
-
-          <li>
-            <strong>8. Repeat claims even after they’ve been corrected.</strong><br>
-            Consistency matters more than accuracy.
-          </li>
-
-          <li>
-            <strong>9. Accuse experts of lying, then demand expert studies.</strong><br>
-            Disregard the studies once they arrive.
-          </li>
-
-          <li>
-            <strong>10. If all else fails, shout “follow the money.”</strong><br>
-            No need to specify whose or how. Just gesture vaguely.
-          </li>
-        </ol>
-
-        <div class="bg-slate-100 border border-slate-200 rounded-md px-4 py-3 mt-3 text-xs text-slate-700 space-y-1">
-          <p><strong>IMPORTANT NOTE</strong></p>
-          <p>
-            Actual civic engagement usually works better with listening, facts, and good-faith discussion—but that wouldn’t be nearly as theatrical.
+        <!-- Hero title -->
+        <section class="space-y-4">
+          <p class="text-lg sm:text-xl font-semibold">
+            Protecting Our Community Against 900,000 sq. ft. AI Data Center
           </p>
-        </div>
 
-        <div class="bg-slate-50 border border-slate-200 rounded-md px-4 py-3 mt-3 text-xs text-slate-700 space-y-1">
-          <p><strong>OPTIONAL TAGLINES YOU CAN ROTATE</strong></p>
-          <p>“Participation without comprehension.”</p>
-          <p>“All emotion. No spreadsheets.”</p>
-          <p>“If we’re loud enough, maybe reality will change.”</p>
-          <p>“Democracy, but only if we win.”</p>
-        </div>
-      </section>
+          <!-- Gallery exactly under hero -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            <div class="aspect-[4/3] rounded-lg overflow-hidden bg-slate-100 border border-slate-200 flex items-center justify-center text-[11px] text-slate-500">
+              <span>image1.jpg</span>
+            </div>
+            <div class="aspect-[4/3] rounded-lg overflow-hidden bg-slate-100 border border-slate-200 flex items-center justify-center text-[11px] text-slate-500">
+              <span>image2.jpg</span>
+            </div>
+            <div class="aspect-[4/3] rounded-lg overflow-hidden bg-slate-100 border border-slate-200 flex items-center justify-center text-[11px] text-slate-500">
+              <span>image3.jpg</span>
+            </div>
+          </div>
+        </section>
 
-      <!-- ABOUT THE PROJECT (LIGHT TOUCH) -->
-      <section id="about" class="space-y-4">
-        <h2 class="text-2xl font-bold">About the project</h2>
-        <p class="text-sm text-slate-800">
-          The original site uses a long list of bills, pollution, water and noise claims to frame the project. This page keeps the same topics while making it clear that some of the most dramatic lines are doing more emotional work than technical work.
-        </p>
-      </section>
-
-      <!-- CALENDAR -->
-      <section id="calendar" class="space-y-4">
-        <h2 class="text-2xl font-bold">Calendar of meetings</h2>
-        <p class="text-sm text-slate-700">
-          Upcoming Meetings &amp; Opportunities to Be Outraged
-        </p>
-
-        <div class="space-y-4 text-sm text-slate-800 leading-relaxed">
-
+        <!-- What / Where -->
+        <section class="space-y-4 text-sm sm:text-base">
           <div>
-            <h3 class="font-semibold">Public Hearing</h3>
-            <p>
-              Arrive early. Leave before answers are given. Be as disruptive and loud and unfriendly as possible. Shout down the presenters. Try to get removed for TV.
+            <h2 class="font-semibold mb-1">What?</h2>
+            <p class="text-slate-700">
+              Sabey Data Centers is proposing an approximately 900,000 square foot data center campus in Decatur Township,
+              designed with two primary buildings, secure infrastructure, and closed loop cooling that uses a one time
+              initial water fill and then office scale annual water use.
             </p>
           </div>
 
           <div>
-            <h3 class="font-semibold">Community Forum</h3>
-            <p>
-              Ask questions already answered online.
+            <h2 class="font-semibold mb-1">Where?</h2>
+            <p class="text-slate-700">
+              The campus is planned between Kentucky Avenue and Camby Road in Decatur Township. Site map and rendering
+              from the project materials can be placed here by the site owner to show how the buildings sit on the land.
             </p>
           </div>
+        </section>
 
-          <div>
-            <h3 class="font-semibold">Vote Night</h3>
-            <p>
-              Claim the process was unfair regardless of outcome.
-            </p>
-          </div>
-        </div>
+        <!-- About the project -->
+        <section id="about" class="border-t border-slate-200 pt-6 text-sm sm:text-base space-y-4">
+          <h2 class="font-semibold text-base sm:text-lg">
+            About the project
+          </h2>
+          <p class="text-slate-700">
+            The land is already zoned for intense distribution uses. A previously approved plan allowed six large
+            warehouse buildings, heavy truck traffic, and visible loading activity. Sabey’s proposal replaces that
+            with two secure data center buildings, fewer peak hour trips, and enclosed equipment that is designed to
+            operate quietly with significant landscaped buffers.
+          </p>
+          <p class="text-slate-700">
+            Cooling for the computers uses a closed loop system that is designed to minimize water use. The system
+            needs a one time initial load of water and then uses annual volumes that are in the range of a typical
+            office building for restrooms, kitchen spaces, landscaping, and humidity control. This is a different
+            profile from traditional industrial facilities that rely on constant once through water use.
+          </p>
+          <p class="text-slate-700">
+            Power for the campus is provided through the regulated utility process, where any major investment is
+            reviewed in public rate cases and long term resource plans. Data center customers pay for customer specific
+            infrastructure and dedicated facilities, and in many cases large steady loads can help spread fixed costs
+            over more units of electricity sold. That is how utilities often describe large users that can help
+            stabilize the grid and support long term upgrades.
+          </p>
+          <p class="text-slate-700">
+            During construction, the project supports hundreds of union trades jobs. In operation, the campus is
+            expected to support about one hundred permanent, skilled roles on site along with indirect work for local
+            businesses that serve the facility and its employees. Property and equipment taxes contribute to schools,
+            public safety, and local services over the life of the project.
+          </p>
+          <p class="text-slate-700">
+            Reasonable people can still disagree about land use, priorities, and what kind of growth they want to see.
+            This page focuses on how opposition can sometimes slide from informed debate into performance, even when
+            the underlying facts about water, traffic, power, and jobs are available in public documents.
+          </p>
+        </section>
 
-        <p class="text-xs text-slate-600 mt-2">
-          Attendance encouraged. Listening discouraged.
-        </p>
-      </section>
+        <!-- Why are residents fighting back -->
+        <section id="why" class="border-t border-slate-200 pt-6 space-y-4 text-sm sm:text-base">
+          <h2 class="font-semibold text-base sm:text-lg">
+            Why are residents “fighting back”?
+          </h2>
+          <p class="text-slate-700">
+            Because progress is inconvenient.
+          </p>
 
-      <!-- ACTION CARDS (DONATE, SIGN, ETC) -->
-      <section class="space-y-4">
-        <h2 class="text-2xl font-bold">Do something</h2>
-
-        <div class="grid md:grid-cols-2 gap-4 text-sm">
-
-          <!-- DONATE -->
-          <div class="border border-slate-200 rounded-md px-4 py-4 flex flex-col justify-between bg-slate-50">
+          <div class="space-y-3 text-slate-800">
             <div>
-              <h3 class="font-semibold mb-1">DONATE</h3>
-              <p class="text-slate-800">
-                Donate to the Cause
-              </p>
-              <p class="text-slate-800 mt-1">
-                Help fund more clipboards, matching T-shirts, and outrage graphics.
-                All donations go toward vibes, slogans, and printing the same flyer again.
+              <h3 class="font-semibold mb-1 text-sm sm:text-base">
+                Higher electricity and water bills, maybe someday
+              </h3>
+              <p>
+                We prefer an aging grid held together with duct tape. Modern infrastructure threatens the comfort of
+                rolling blackouts, surprise outages, and infrastructure failures we have grown used to.
               </p>
             </div>
-            <a href="#" onclick="return false;" class="mt-3 inline-flex justify-center rounded-md bg-red-700 text-white text-xs font-semibold px-3 py-2 cursor-default">
-              Donate
-            </a>
+
+            <div>
+              <h3 class="font-semibold mb-1 text-sm sm:text-base">
+                Property values might go up, and that is a problem
+              </h3>
+              <p>
+                Rising property values could increase equity, attract reinvestment, and improve public services.
+                Naturally, we oppose all of that. Decline is predictable. Growth is scary.
+              </p>
+            </div>
+
+            <div>
+              <h3 class="font-semibold mb-1 text-sm sm:text-base">
+                Health risks
+              </h3>
+              <p>
+                Although backup generators run rarely and under strict regulations, we prefer to imagine them
+                operating all day in a permanent cloud of doom. Actual nearby highways, warehouses, delivery trucks,
+                and existing industrial uses are familiar and therefore harmless.
+              </p>
+            </div>
+
+            <div>
+              <h3 class="font-semibold mb-1 text-sm sm:text-base">
+                Noise concerns
+              </h3>
+              <p>
+                Quiet enclosed buildings with limited traffic are unacceptable. We strongly favor constant diesel
+                truck traffic, backup beeping, and overnight loading docks. Those noises feel more authentic.
+              </p>
+            </div>
+
+            <div>
+              <h3 class="font-semibold mb-1 text-sm sm:text-base">
+                Light pollution
+              </h3>
+              <p>
+                Security lighting that meets code and shuts down when it is not needed is deeply offensive. We prefer
+                the warm glow of underfunded streetlights, broken fixtures, and dark corridors that discourage walking
+                and safety.
+              </p>
+            </div>
           </div>
 
-          <!-- REQUEST A YARD SIGN -->
-          <div class="border border-slate-200 rounded-md px-4 py-4 flex flex-col justify-between bg-slate-50">
+          <div class="pt-4 border-t border-slate-200 space-y-3 text-sm sm:text-base text-slate-800">
             <div>
-              <h3 class="font-semibold mb-1">REQUEST A YARD SIGN</h3>
-              <p class="text-slate-800">
-                Request a Yard Sign
-              </p>
-              <p class="text-slate-800 mt-1">
-                Let your neighbors know where you stand—without needing to explain why.
-              </p>
-              <p class="text-slate-800 mt-1">
-                Signs available in:
-              </p>
-              <ul class="list-disc list-inside text-slate-800 text-xs mt-1 space-y-1">
-                <li>“NO (Don’t Ask Me For Details)”</li>
-                <li>“SAVE OUR COMMUNITY"</li>
-                <li>“I READ THE HEADLINE”</li>
+              <h3 class="font-semibold mb-1">
+                Our real concern, just being honest
+              </h3>
+              <ul class="list-disc list-inside space-y-1">
+                <li>We oppose high paying jobs.</li>
+                <li>We oppose lower traffic than warehouses.</li>
+                <li>We oppose new tax revenue for schools, police, and fire.</li>
+                <li>We oppose planning for the AI driven economy.</li>
+                <li>We oppose anything new, especially if it works.</li>
               </ul>
             </div>
-            <a href="#" onclick="return false;" class="mt-3 inline-flex justify-center rounded-md bg-slate-900 text-white text-xs font-semibold px-3 py-2 cursor-default">
-              Request a yard sign
-            </a>
-          </div>
-
-          <!-- EMAIL THE CITY PLANNER -->
-          <div class="border border-slate-200 rounded-md px-4 py-4 flex flex-col justify-between bg-slate-50">
             <div>
-              <h3 class="font-semibold mb-1">EMAIL THE CITY PLANNER (PARODY)</h3>
-              <p class="text-slate-800">
-                Email the City Planner
-              </p>
-              <p class="text-slate-800 mt-1">
-                We’ve drafted a template so you don’t have to understand the project.
-                Just copy, paste, and send, no reading required.
-              </p>
-              <p class="text-xs italic text-slate-700 mt-2">
-                Sample preview line:
-                “I am deeply concerned and demand action immediately.”
-              </p>
-              <p class="text-xs italic text-slate-700 mt-1">
-                (Concern subject to change based on Facebook comments.)
-              </p>
-              <p class="text-xs italic text-slate-700 mt-1">
-                Alt line:
-                “Bonus points for CC’ing people who aren’t involved.”
+              <h3 class="font-semibold mb-1">In summary</h3>
+              <p>
+                We are not anti data center. We are pro decline, pro status quo, and pro complaint. And we will fight
+                progress quietly, loudly, and on the internet.
               </p>
             </div>
-            <a href="#" onclick="return false;" class="mt-3 inline-flex justify-center rounded-md bg-red-700 text-white text-xs font-semibold px-3 py-2 cursor-default">
-              Email the city planner
-            </a>
+          </div>
+        </section>
+
+        <!-- What can I do main parody list -->
+        <section id="actions" class="border-t border-slate-200 pt-6 space-y-5 text-sm sm:text-base">
+          <div class="space-y-2">
+            <h2 class="font-semibold text-base sm:text-lg">
+              What can I do?
+            </h2>
+            <p class="text-slate-700 text-sm">
+              A field guide for the performative citizen who wants to be involved, sound very concerned, and avoid
+              reading anything longer than a headline.
+            </p>
           </div>
 
-          <!-- SIGN THE PETITION -->
-          <div class="border border-slate-200 rounded-md px-4 py-4 flex flex-col justify-between bg-slate-50">
+          <ol class="space-y-3 text-slate-800">
+            <li>
+              <p class="font-semibold">
+                1. Attend every public meeting, prepared to ignore facts.
+              </p>
+              <p>
+                Bring pre printed talking points. Do not read staff reports. Do not listen. Interrupt politely at first, then loudly.
+              </p>
+            </li>
+            <li>
+              <p class="font-semibold">
+                2. Demand community input, then reject all outcomes.
+              </p>
+              <p>
+                Participate enthusiastically unless the decision does not go your way. In that case, claim the process was rigged.
+              </p>
+            </li>
+            <li>
+              <p class="font-semibold">
+                3. Chant slogans instead of asking questions.
+              </p>
+              <p>
+                Complex topics like zoning, utilities, or environmental controls are best addressed with yelling.
+              </p>
+            </li>
+            <li>
+              <p class="font-semibold">
+                4. Coordinate applause, boos, and synchronized outrage.
+              </p>
+              <p>
+                Bonus points if you clap mid sentence while someone else is speaking.
+              </p>
+            </li>
+            <li>
+              <p class="font-semibold">
+                5. Hold hands dramatically.
+              </p>
+              <p>
+                It does not change the vote, but it photographs well.
+              </p>
+            </li>
+            <li>
+              <p class="font-semibold">
+                6. Recruit friends from outside the community.
+              </p>
+              <p>
+                Local issue. No problem. Bring reinforcements who have never been here but feel very strongly anyway.
+              </p>
+            </li>
+            <li>
+              <p class="font-semibold">
+                7. Label disagreement as hate.
+              </p>
+              <p>
+                If someone supports the project, do not debate them. Assign a motive.
+              </p>
+            </li>
+            <li>
+              <p class="font-semibold">
+                8. Repeat claims even after they have been corrected.
+              </p>
+              <p>
+                Consistency matters more than accuracy.
+              </p>
+            </li>
+            <li>
+              <p class="font-semibold">
+                9. Accuse experts of lying, then demand expert studies.
+              </p>
+              <p>
+                Disregard the studies once they arrive.
+              </p>
+            </li>
+            <li>
+              <p class="font-semibold">
+                10. If all else fails, shout follow the money.
+              </p>
+              <p>
+                No need to specify whose or how. Just gesture vaguely.
+              </p>
+            </li>
+          </ol>
+
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 space-y-3 text-xs sm:text-sm text-slate-800">
+            <p class="font-semibold">
+              Important note
+            </p>
+            <p>
+              Actual civic engagement usually works better with listening, facts, and good faith discussion. It just is not nearly as theatrical.
+            </p>
             <div>
-              <h3 class="font-semibold mb-1">SIGN THE PETITION</h3>
-              <p class="text-slate-800">
-                Sign the Petition
+              <p class="uppercase tracking-wide text-[10px] text-slate-500 mb-1">
+                Optional taglines
               </p>
-              <p class="text-slate-800 mt-1">
-                Join thousands of people who agree something feels wrong, even if we can’t say what.
+              <ul class="space-y-1">
+                <li>Participation without comprehension.</li>
+                <li>All emotion. No spreadsheets.</li>
+                <li>If we are loud enough, maybe reality will change.</li>
+                <li>Democracy, but only if we win.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- Cards: Donate, Yard sign, Email, Petition -->
+        <section class="border-t border-slate-200 pt-6 text-sm sm:text-base space-y-5">
+          <div>
+            <h2 class="font-semibold text-base sm:text-lg">
+              What else can I do?
+            </h2>
+            <p class="text-slate-700 text-sm">
+              Choose your favorite expression of unresearched passion. Every action here is a parody action.
+            </p>
+          </div>
+
+          <div class="grid sm:grid-cols-2 gap-5">
+            <!-- Donate -->
+            <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 flex flex-col justify-between gap-3">
+              <div class="space-y-2">
+                <h3 class="font-semibold">Donate to the cause</h3>
+                <p class="text-slate-700">
+                  Help fund more clipboards, matching T shirts, and outrage graphics. All donations go toward vibes,
+                  slogans, and printing the same flyer again.
+                </p>
+              </div>
+              <button
+                type="button"
+                class="mt-1 inline-flex justify-center rounded-lg bg-red-600 text-white text-xs font-semibold px-3 py-2"
+              >
+                DONATE
+              </button>
+            </div>
+
+            <!-- Yard sign -->
+            <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 flex flex-col justify-between gap-3">
+              <div class="space-y-2">
+                <h3 class="font-semibold">Request a yard sign</h3>
+                <p class="text-slate-700">
+                  Let your neighbors know where you stand without needing to explain why.
+                </p>
+                <ul class="text-slate-700 list-disc list-inside space-y-1">
+                  <li>NO, do not ask me for details</li>
+                  <li>SAVE OUR COMMUNITY</li>
+                  <li>I READ THE HEADLINE</li>
+                </ul>
+              </div>
+              <button
+                type="button"
+                class="mt-1 inline-flex justify-center rounded-lg bg-slate-900 text-white text-xs font-semibold px-3 py-2"
+              >
+                REQUEST A YARD SIGN
+              </button>
+            </div>
+
+            <!-- Email city planner -->
+            <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 flex flex-col justify-between gap-3">
+              <div class="space-y-2">
+                <h3 class="font-semibold">Email the city planner</h3>
+                <p class="text-slate-700">
+                  We have drafted a template so you do not have to understand the project. Just copy, paste, and send.
+                  No reading required.
+                </p>
+                <p class="text-slate-700 italic text-xs">
+                  “I am deeply concerned and demand action immediately.”
+                </p>
+                <p class="text-slate-700 italic text-xs">
+                  Concern subject to change based on Facebook comments. Bonus points for copying people who are not involved.
+                </p>
+              </div>
+              <button
+                type="button"
+                class="mt-1 inline-flex justify-center rounded-lg bg-red-600 text-white text-xs font-semibold px-3 py-2"
+              >
+                EMAIL THE CITY PLANNER
+              </button>
+            </div>
+
+            <!-- Sign petition -->
+            <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 flex flex-col justify-between gap-3">
+              <div class="space-y-2">
+                <h3 class="font-semibold">Sign the petition</h3>
+                <p class="text-slate-700">
+                  Join thousands of people who agree something feels wrong even if we cannot say what.
+                </p>
+                <p class="text-slate-700">
+                  Facts optional. Signature permanent.
+                </p>
+                <p class="text-slate-700">
+                  Signing does not require residency.
+                </p>
+              </div>
+              <button
+                type="button"
+                class="mt-1 inline-flex justify-center rounded-lg bg-slate-900 text-white text-xs font-semibold px-3 py-2"
+              >
+                SIGN THE PETITION
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Calendar -->
+        <section id="calendar" class="border-t border-slate-200 pt-6 text-sm sm:text-base space-y-5">
+          <div>
+            <h2 class="font-semibold text-base sm:text-lg">
+              Calendar of meetings
+            </h2>
+            <p class="text-slate-700 text-sm">
+              Upcoming meetings and opportunities to be outraged. Attendance encouraged. Listening discouraged.
+            </p>
+          </div>
+
+          <div class="grid sm:grid-cols-3 gap-5">
+            <div class="bg-white border border-slate-200 rounded-xl p-4 space-y-2">
+              <p class="text-[11px] font-semibold text-red-700 uppercase tracking-wide">
+                Public hearing
               </p>
-              <p class="text-slate-800 mt-1">
-                Facts optional. Signature permanent.
+              <p class="text-slate-700">
+                Arrive early. Leave before answers are given. Be as disruptive and loud and unfriendly as possible.
               </p>
-              <p class="text-slate-800 mt-1">
-                “Signing does not require residency.”
+              <p class="text-slate-700">
+                Shout down the presenters. Try to get removed for television.
               </p>
             </div>
-            <a href="#" onclick="return false;" class="mt-3 inline-flex justify-center rounded-md bg-slate-900 text-white text-xs font-semibold px-3 py-2 cursor-default">
-              Sign the petition
-            </a>
+
+            <div class="bg-white border border-slate-200 rounded-xl p-4 space-y-2">
+              <p class="text-[11px] font-semibold text-red-700 uppercase tracking-wide">
+                Community forum
+              </p>
+              <p class="text-slate-700">
+                Ask questions already answered online. Ignore any materials that were mailed or posted.
+              </p>
+              <p class="text-slate-700">
+                Repeat your question louder if you do not like the answer.
+              </p>
+            </div>
+
+            <div class="bg-white border border-slate-200 rounded-xl p-4 space-y-2">
+              <p class="text-[11px] font-semibold text-red-700 uppercase tracking-wide">
+                Vote night
+              </p>
+              <p class="text-slate-700">
+                Claim the process was unfair regardless of outcome.
+              </p>
+              <p class="text-slate-700">
+                If you win, say it was because the people spoke. If you lose, say it was corruption.
+              </p>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <!-- MORE RESOURCES -->
-      <section id="resources" class="space-y-4">
-        <h2 class="text-2xl font-bold">More resources</h2>
-        <p class="text-sm text-slate-700">
-          Listed here in plain text. Not endorsements. Not clickable.
-        </p>
+        <!-- More resources -->
+        <section id="resources" class="border-t border-slate-200 pt-6 text-sm sm:text-base space-y-4">
+          <h2 class="font-semibold text-base sm:text-lg">
+            More resources and influences
+          </h2>
+          <p class="text-slate-700">
+            Below are organizations, pages, and references that appear in the general ecosystem of online commentary
+            and activism around issues like this. Listed here in plain text for context only.
+          </p>
 
-        <div class="bg-slate-50 border border-slate-200 rounded-md px-4 py-4 text-xs text-slate-800 space-y-1">
-          <p>https://perfectunion.us/about/</p>
-          <p>https://www.instagram.com/berniesanders/</p>
-          <p>https://en.wikipedia.org/wiki/Mayoralty_of_Zohran_Mamdani?utm_source=chatgpt.com</p>
-          <p>https://www.instagram.com/zohrankmamdani/</p>
-          <p>https://www.opensocietyfoundations.org/</p>
-          <p>https://en.wikipedia.org/wiki/Solidarity_%28United_States%29?utm_source=chatgpt.com</p>
-        </div>
-      </section>
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 text-xs sm:text-sm text-slate-800 space-y-1">
+            <p>perfectunion.us/about/</p>
+            <p>instagram.com/berniesanders/</p>
+            <p>wikipedia.org/wiki/Mayoralty_of_Zohran_Mamdani</p>
+            <p>instagram.com/zohrankmamdani/</p>
+            <p>opensocietyfoundations.org/</p>
+            <p>wikipedia.org/wiki/Solidarity_(United_States)</p>
+          </div>
+        </section>
 
-      <!-- CONTACT -->
-      <section id="contact" class="space-y-4">
-        <h2 class="text-2xl font-bold">Contact</h2>
-        <p class="text-sm text-slate-800">
-          For real questions about the project, the most reliable path is to read official materials, attend meetings, and speak with staff who work on planning, engineering, and public health. For conversations about feelings, talk with neighbors in good faith.
-        </p>
-      </section>
-
+      </div>
     </main>
 
-    <!-- FOOTER -->
-    <footer class="border-t border-slate-200 bg-slate-50 mt-12">
-      <div class="content-width mx-auto px-4 py-6 text-xs text-slate-600 space-y-2">
-        <p>
-          Disclaimer:<br>
-          This website is a work of satire and parody intended for humor and commentary. It does not represent factual claims, real instructions, or actual positions of any individual or organization.
-        </p>
-        <p>
-          Protected speech under the First Amendment of the United States Constitution
+    <!-- Footer -->
+    <footer class="border-t border-slate-200 bg-slate-50 mt-10">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 py-6">
+        <p class="text-[11px] text-slate-500">
+          This site presents opinion content and commentary about local land use, infrastructure, and public process in Decatur Township.
         </p>
       </div>
     </footer>
 
   </div>
 
-  <!-- PASSWORD SCRIPT -->
   <script>
-    (function () {
-      var correctPassword = "decaturparody123";
-      var form = document.getElementById("password-form");
-      var input = document.getElementById("password-input");
-      var error = document.getElementById("password-error");
-      var screen = document.getElementById("password-screen");
-      var content = document.getElementById("site-content");
+    // Password logic
+    const PASSWORD = "decaturparody123";
 
-      if (sessionStorage.getItem("nddUnlocked") === "true") {
-        screen.classList.add("hidden");
-        content.classList.remove("hidden");
-        return;
-      }
+    const gate = document.getElementById("password-gate");
+    const form = document.getElementById("password-form");
+    const input = document.getElementById("password-input");
+    const errorEl = document.getElementById("password-error");
 
-      form.addEventListener("submit", function (e) {
-        e.preventDefault();
-        if (input.value === correctPassword) {
-          sessionStorage.setItem("nddUnlocked", "true");
-          screen.classList.add("hidden");
-          content.classList.remove("hidden");
-        } else {
-          error.classList.remove("hidden");
+    function unlockIfStored() {
+      try {
+        const stored = sessionStorage.getItem("protect_decatur_pw_ok");
+        if (stored === "1") {
+          gate.classList.add("hidden");
         }
-      });
-    })();
-  </script>
+      } catch (e) {}
+    }
 
+    unlockIfStored();
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const value = input.value.trim();
+      if (value === PASSWORD) {
+        gate.classList.add("hidden");
+        errorEl.textContent = "";
+        try {
+          sessionStorage.setItem("protect_decatur_pw_ok", "1");
+        } catch (e) {}
+      } else {
+        errorEl.textContent = "Incorrect password. Please try again.";
+      }
+    });
+
+    // Mobile menu toggle
+    const toggle = document.getElementById("mobileToggle");
+    const mobileNav = document.getElementById("mobileNav");
+
+    if (toggle && mobileNav) {
+      toggle.addEventListener("click", () => {
+        mobileNav.classList.toggle("hidden");
+      });
+    }
+  </script>
 </body>
 </html>
+
 
